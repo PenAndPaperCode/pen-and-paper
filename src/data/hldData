@@ -1,0 +1,18 @@
+const hldData = {
+  "System Design Basics": {
+    "Intro to System Design": {
+      youtube: "https://youtu.be/example10",
+      platform: "YouTube",
+      github: "https://github.com/example10",
+    },
+  },
+  "API Gateway": {
+    "Gateway Concepts": {
+      youtube: "https://youtu.be/example11",
+      platform: "YouTube",
+      github: "https://github.com/example11",
+    },
+  },
+};
+
+export default hldData;
