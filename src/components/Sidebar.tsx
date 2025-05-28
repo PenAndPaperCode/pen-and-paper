@@ -93,14 +93,12 @@ const Sidebar: React.FC<SidebarProps> = memo(({
                       aria-controls={`${topic}-subtopics`}
                     >
                       {topic}
-                      {category === 'DSA' && (
-                        <span className="float-right">{selectedTopic === topic && expandedTopics[topic] ? '▼' : '▶'}</span>
-                      )}
+                      <span className="float-right">{selectedTopic === topic && expandedTopics[topic] ? '▼' : '▶'}</span>
                     </button>
                     
-                    {category === 'DSA' && selectedTopic === topic && expandedTopics[topic] && (
+                    {selectedTopic === topic && expandedTopics[topic] && (
                       <ul id={`${topic}-subtopics`} className="ml-4 mt-1 space-y-1">
-                        {Object.keys(data.DSA[topic]).map((subtopic) => (
+                        {Object.keys(data[selectedCategory][topic]).map((subtopic) => (
                           <li key={subtopic}>
                             <button
                               className={`w-full text-left p-2 rounded-md ${

@@ -6,17 +6,24 @@
 
 import { HLDData } from '../types';
 
-// Import HLD data from existing files
-import scalability from './hld/scalability';
-import dataStorage from './hld/dataStorage';
+// Import subtopics
+import loadBalancing from './hld/loadBalancing';
+import scaling from './hld/scaling';
+import sqlNoSql from './hld/sqlNoSql';
+import indexing from './hld/indexing';
 
 /**
- * Complete collection of HLD topics
- * Only Scalability and Data Storage are currently active
+ * Complete collection of HLD topics with subtopics
  */
 const hldData: HLDData = {
-  "Scalability": scalability,
-  "Data Storage": dataStorage
+  "Scalability": {
+    "Load Balancing": loadBalancing,
+    "Scaling Strategies": scaling
+  },
+  "Data Storage": {
+    "SQL vs NoSQL": sqlNoSql,
+    "Database Indexing": indexing
+  }
 };
 
 export default hldData;

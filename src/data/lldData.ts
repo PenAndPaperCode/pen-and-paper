@@ -6,17 +6,18 @@
 
 import { LLDData } from '../types';
 
-// Direct imports from design patterns
-import creationalPatterns from './lld/designPatterns/creationalPatterns';
-import structuralPatterns from './lld/designPatterns/structuralPatterns';
+// Import subtopics
+import creationalPatterns from './lld/creationalPatterns';
+import structuralPatterns from './lld/structuralPatterns';
 
 /**
- * Complete collection of LLD topics
- * Only Creational and Structural patterns are currently active
+ * Complete collection of LLD topics with subtopics
  */
 const lldData: LLDData = {
-  "Creational Patterns": creationalPatterns,
-  "Structural Patterns": structuralPatterns
+  "Design Patterns": {
+    "Creational": creationalPatterns,
+    "Structural": structuralPatterns
+  }
 };
 
 export default lldData;

@@ -17,21 +17,27 @@ export interface DSAData {
 // Data structure types for HLD
 export interface HLDData {
   [topic: string]: {
-    [problemName: string]: LearningResource;
+    [subtopic: string]: {
+      [problemName: string]: LearningResource;
+    };
   };
 }
 
 // Data structure types for LLD
 export interface LLDData {
   [topic: string]: {
-    [implementationName: string]: LearningResource;
+    [subtopic: string]: {
+      [implementationName: string]: LearningResource;
+    };
   };
 }
 
 // Data structure types for Machine Coding
 export interface MachineCodingData {
   [topic: string]: {
-    [componentName: string]: LearningResource;
+    [subtopic: string]: {
+      [componentName: string]: LearningResource;
+    };
   };
 }
 

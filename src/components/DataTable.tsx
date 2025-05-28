@@ -33,78 +33,43 @@ const DataTable: React.FC<DataTableProps> = ({
   // Get the appropriate data based on category
   const getProblem = (): ProblemWithName | null => {
     try {
-      // Handle DSA category which has a unique three-level structure
-      if (selectedCategory === 'DSA') {
-        // Check if the topic exists
-        if (!data.DSA[selectedTopic]) {
+      // All categories now have a three-level structure
+      if (!data[selectedCategory]?.[selectedTopic]) {
+        // eslint-disable-next-line no-console
+        console.error(`Topic "${selectedTopic}" not found in ${selectedCategory} data`);
+        return null;
+      }
+      
+      // If subtopic is provided, use it
+      if (selectedSubtopic) {
+        const subtopicData = data[selectedCategory][selectedTopic][selectedSubtopic];
+        if (!subtopicData) {
           // eslint-disable-next-line no-console
-          console.error(`Topic "${selectedTopic}" not found in DSA data`);
+          console.error(`Subtopic "${selectedSubtopic}" not found in "${selectedTopic}"`);
           return null;
         }
         
-        // If subtopic is provided, use it
-        if (selectedSubtopic) {
-          const subtopicData = data.DSA[selectedTopic][selectedSubtopic];
-          if (!subtopicData) {
-            // eslint-disable-next-line no-console
-            console.error(`Subtopic "${selectedSubtopic}" not found in "${selectedTopic}"`);
-            return null;
-          }
-          
-          // Get the first problem from the subtopic
-          const firstProblemKey = Object.keys(subtopicData)[0];
-          if (!firstProblemKey) return null;
-          
-          return {
-            name: firstProblemKey,
-            ...(subtopicData[firstProblemKey] as LearningResource)
-          };
-        } else {
-          // If no subtopic, get the first problem from the first subtopic
-          const firstSubtopic = Object.keys(data.DSA[selectedTopic])[0];
-          if (!firstSubtopic) return null;
-          
-          const subtopicData = data.DSA[selectedTopic][firstSubtopic];
-          const firstProblemKey = Object.keys(subtopicData)[0];
-          if (!firstProblemKey) return null;
-          
-          return {
-            name: `${firstSubtopic}: ${firstProblemKey}`,
-            ...(subtopicData[firstProblemKey] as LearningResource)
-          };
-        }
-      } 
-      // Handle other categories (LLD, HLD, Machine Coding) which have a two-level structure
-      else {
-        // Check if the topic exists
-        if (!data[selectedCategory][selectedTopic]) {
-          // eslint-disable-next-line no-console
-          console.error(`Topic "${selectedTopic}" not found in ${selectedCategory} data`);
-          return null;
-        }
+        // Get the first problem from the subtopic
+        const firstProblemKey = Object.keys(subtopicData)[0];
+        if (!firstProblemKey) return null;
         
-        const topicData = data[selectedCategory][selectedTopic];
+        return {
+          name: firstProblemKey,
+          ...(subtopicData[firstProblemKey] as LearningResource)
+        };
+      } else {
+        // If no subtopic, get the first problem from the first subtopic
+        const firstSubtopic = Object.keys(data[selectedCategory][selectedTopic])[0];
+        if (!firstSubtopic) return null;
         
-        // Get the first item from the topic
-        const firstItemKey = Object.keys(topicData)[0];
-        if (!firstItemKey) return null;
+        const subtopicData = data[selectedCategory][selectedTopic][firstSubtopic];
+        const firstProblemKey = Object.keys(subtopicData)[0];
+        if (!firstProblemKey) return null;
         
-        const firstItem = topicData[firstItemKey];
-        
-        if (firstItem && typeof firstItem === 'object' && 'youtube' in firstItem) {
-          return {
-            name: firstItemKey,
-            ...(firstItem as LearningResource)
-          };
-        } else {
-          // Fallback for any unexpected structure
-          return {
-            name: firstItemKey,
-            youtube: '#',
-            platform: 'Not available',
-            github: '#'
-          };
-        }
+        return {
+          name: `${firstSubtopic}: ${firstProblemKey}`,
+          ...(subtopicData[firstProblemKey] as LearningResource)
+        };
       }
     } catch (error) {
       // eslint-disable-next-line no-console
