@@ -4,9 +4,15 @@ import { AppData } from '../types';
 interface WelcomeProps {
   category: keyof AppData | null;
   topic: string | null;
+  setSelectedCategory: React.Dispatch<React.SetStateAction<keyof AppData | null>>;
 }
 
-const Welcome: React.FC<WelcomeProps> = ({ category, topic }) => {
+const Welcome: React.FC<WelcomeProps> = ({ category, topic, setSelectedCategory }) => {
+  // Handler for category card clicks
+  const handleCategoryClick = (selectedCategory: keyof AppData) => {
+    setSelectedCategory(selectedCategory);
+  };
+
   // If a category is selected but no topic, show category-specific welcome
   if (category && !topic) {
     return (
@@ -55,28 +61,52 @@ const Welcome: React.FC<WelcomeProps> = ({ category, topic }) => {
       </p>
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-        <div className="bg-gray-800 p-6 rounded-lg">
+        <div 
+          className="bg-gray-800 p-6 rounded-lg cursor-pointer transition-all duration-300 hover:bg-gray-700 hover:shadow-lg transform hover:scale-105"
+          onClick={() => handleCategoryClick('DSA')}
+          role="button"
+          aria-label="Select DSA category"
+          tabIndex={0}
+        >
           <h2 className="text-2xl font-semibold mb-2">DSA</h2>
           <p className="text-gray-300">
             Master data structures and algorithms with our curated collection of problems.
           </p>
         </div>
         
-        <div className="bg-gray-800 p-6 rounded-lg">
+        <div 
+          className="bg-gray-800 p-6 rounded-lg cursor-pointer transition-all duration-300 hover:bg-gray-700 hover:shadow-lg transform hover:scale-105"
+          onClick={() => handleCategoryClick('LLD')}
+          role="button"
+          aria-label="Select LLD category"
+          tabIndex={0}
+        >
           <h2 className="text-2xl font-semibold mb-2">LLD</h2>
           <p className="text-gray-300">
             Learn low-level design patterns and principles for writing clean, maintainable code.
           </p>
         </div>
         
-        <div className="bg-gray-800 p-6 rounded-lg">
+        <div 
+          className="bg-gray-800 p-6 rounded-lg cursor-pointer transition-all duration-300 hover:bg-gray-700 hover:shadow-lg transform hover:scale-105"
+          onClick={() => handleCategoryClick('HLD')}
+          role="button"
+          aria-label="Select HLD category"
+          tabIndex={0}
+        >
           <h2 className="text-2xl font-semibold mb-2">HLD</h2>
           <p className="text-gray-300">
             Explore high-level system design concepts for building scalable applications.
           </p>
         </div>
         
-        <div className="bg-gray-800 p-6 rounded-lg">
+        <div 
+          className="bg-gray-800 p-6 rounded-lg cursor-pointer transition-all duration-300 hover:bg-gray-700 hover:shadow-lg transform hover:scale-105"
+          onClick={() => handleCategoryClick('Machine Coding')}
+          role="button"
+          aria-label="Select Machine Coding category"
+          tabIndex={0}
+        >
           <h2 className="text-2xl font-semibold mb-2">Machine Coding</h2>
           <p className="text-gray-300">
             Practice implementing real-world applications with our machine coding challenges.
@@ -85,7 +115,7 @@ const Welcome: React.FC<WelcomeProps> = ({ category, topic }) => {
       </div>
       
       <div className="mt-8 text-gray-400">
-        Select a category from the sidebar to get started.
+        Click on any category above or select from the sidebar to get started.
       </div>
     </div>
   );

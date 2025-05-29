@@ -12,6 +12,7 @@ interface ContentAreaProps {
   data: AppData;
   doneStatus: DoneStatusType;
   setDoneStatus: React.Dispatch<React.SetStateAction<DoneStatusType>>;
+  setSelectedCategory: React.Dispatch<React.SetStateAction<keyof AppData | null>>;
 }
 
 const ContentArea: React.FC<ContentAreaProps> = memo(({
@@ -20,7 +21,8 @@ const ContentArea: React.FC<ContentAreaProps> = memo(({
   selectedSubtopic,
   data,
   doneStatus,
-  setDoneStatus
+  setDoneStatus,
+  setSelectedCategory
 }) => {
   // Debug logging
   useEffect(() => {
@@ -43,7 +45,11 @@ const ContentArea: React.FC<ContentAreaProps> = memo(({
     <div className="flex-1 p-6 overflow-auto" role="main">
       <Suspense fallback={<div className="text-center p-4">Loading content...</div>}>
         {!shouldShowDataTable() && (
-          <Welcome category={selectedCategory} topic={selectedTopic} />
+          <Welcome 
+            category={selectedCategory} 
+            topic={selectedTopic} 
+            setSelectedCategory={setSelectedCategory} 
+          />
         )}
         
         {shouldShowDataTable() && selectedCategory && selectedTopic && (

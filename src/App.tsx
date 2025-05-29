@@ -88,6 +88,7 @@ const App: React.FC = () => {
                 data={memoizedData}
                 doneStatus={doneStatus}
                 setDoneStatus={setDoneStatus}
+                setSelectedCategory={setSelectedCategory}
               />
             </Suspense>
           </ErrorBoundary>
