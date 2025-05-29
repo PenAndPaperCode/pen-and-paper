@@ -1,4 +1,4 @@
-const indexing = {
+const databaseIndexing = {
   "Database Indexing": {
     youtube: "https://youtu.be/example_indexing",
     platform: "YouTube",
@@ -6,4 +6,4 @@ const indexing = {
   }
 };
 
-export default indexing;
+export default databaseIndexing;

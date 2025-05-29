@@ -1,4 +1,4 @@
-const sqlNoSql = {
+const comparison = {
   "SQL vs NoSQL Databases": {
     youtube: "https://youtu.be/example_sqlnosql",
     platform: "System Design Interview",
@@ -6,4 +6,4 @@ const sqlNoSql = {
   }
 };
 
-export default sqlNoSql;
+export default comparison;

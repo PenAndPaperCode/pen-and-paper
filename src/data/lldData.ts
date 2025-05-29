@@ -6,18 +6,15 @@
 
 import { LLDData } from '../types';
 
-// Import subtopics
-import creationalPatterns from './lld/creationalPatterns';
-import structuralPatterns from './lld/structuralPatterns';
+// Direct import from design patterns
+import designPatterns from './lld/designPatterns';
 
 /**
- * Complete collection of LLD topics with subtopics
+ * Complete collection of LLD topics
+ * Only Design Patterns is currently active
  */
 const lldData: LLDData = {
-  "Design Patterns": {
-    "Creational": creationalPatterns,
-    "Structural": structuralPatterns
-  }
+  "Design Patterns": designPatterns
 };
 
 export default lldData;

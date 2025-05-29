@@ -6,24 +6,17 @@
 
 import { MachineCodingData } from '../types';
 
-// Import subtopics
-import tokenBucket from './machinecoding/tokenBucket';
-import leakyBucket from './machinecoding/leakyBucket';
-import keyValue from './machinecoding/keyValue';
-import documentBased from './machinecoding/documentBased';
+// Direct imports for main categories
+import rateLimiter from './machinecoding/rateLimiter';
+import inMemoryDB from './machinecoding/inMemoryDB';
 
 /**
- * Complete collection of machine coding topics with subtopics
+ * Complete collection of machine coding topics organized by category
+ * Only Rate Limiter and In-Memory DB are currently active
  */
 const machineCodingData: MachineCodingData = {
-  "Rate Limiter": {
-    "Token Bucket": tokenBucket,
-    "Leaky Bucket": leakyBucket
-  },
-  "In-Memory DB": {
-    "Key-Value Store": keyValue,
-    "Document Store": documentBased
-  }
+  "Rate Limiter": rateLimiter,
+  "In-Memory DB": inMemoryDB
 };
 
 export default machineCodingData;

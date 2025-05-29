@@ -1,14 +1,12 @@
-// Only keeping the top 2 items
+import comparison from './sqlNoSql/comparison';
+import databaseIndexing from './indexing/databaseIndexing';
+
 const dataStorage = {
-  "SQL vs NoSQL Databases": {
-    youtube: "https://youtu.be/example_sqlnosql",
-    platform: "System Design Interview",
-    github: "https://github.com/example_sqlnosql",
+  "SQL vs NoSQL": {
+    ...comparison
   },
   "Database Indexing": {
-    youtube: "https://youtu.be/example_indexing",
-    platform: "YouTube",
-    github: "https://github.com/example_indexing",
+    ...databaseIndexing
   }
 };
 

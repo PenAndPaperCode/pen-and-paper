@@ -1,4 +1,4 @@
-const creationalPatterns = {
+const singleton = {
   "Singleton": {
     youtube: "https://youtu.be/example_singleton",
     platform: "YouTube",
@@ -6,4 +6,4 @@ const creationalPatterns = {
   }
 };
 
-export default creationalPatterns;
+export default singleton;

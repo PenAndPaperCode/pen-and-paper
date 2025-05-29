@@ -1,14 +1,12 @@
-// Only keeping the top 2 items
+import techniques from './loadBalancing/techniques';
+import horizontalVertical from './scaling/horizontalVertical';
+
 const scalability = {
   "Load Balancing": {
-    youtube: "https://youtu.be/example_lb",
-    platform: "System Design Interview",
-    github: "https://github.com/example_lb",
+    ...techniques
   },
-  "Horizontal vs Vertical Scaling": {
-    youtube: "https://youtu.be/example_scaling",
-    platform: "YouTube",
-    github: "https://github.com/example_scaling",
+  "Scaling Strategies": {
+    ...horizontalVertical
   }
 };
 
