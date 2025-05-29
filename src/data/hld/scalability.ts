@@ -1,12 +1,12 @@
-import techniques from './loadBalancing/techniques';
-import horizontalVertical from './scaling/horizontalVertical';
+import loadBalancing from './scalability/loadBalancing';
+import scaling from './scalability/scaling';
 
 const scalability = {
   "Load Balancing": {
-    ...techniques
+    ...loadBalancing
   },
   "Scaling Strategies": {
-    ...horizontalVertical
+    ...scaling
   }
 };
 

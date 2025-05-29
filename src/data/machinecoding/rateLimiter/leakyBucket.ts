@@ -1,4 +1,4 @@
-const algorithm = {
+const leakyBucket = {
   "Leaky Bucket Algorithm": {
     youtube: "https://youtu.be/example_leaky_bucket",
     platform: "YouTube",
@@ -6,4 +6,4 @@ const algorithm = {
   }
 };
 
-export default algorithm;
+export default leakyBucket;

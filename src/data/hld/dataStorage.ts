@@ -1,12 +1,12 @@
-import comparison from './sqlNoSql/comparison';
-import databaseIndexing from './indexing/databaseIndexing';
+import sqlNoSql from './dataStorage/sqlNoSql';
+import indexing from './dataStorage/indexing';
 
 const dataStorage = {
   "SQL vs NoSQL": {
-    ...comparison
+    ...sqlNoSql
   },
   "Database Indexing": {
-    ...databaseIndexing
+    ...indexing
   }
 };
 

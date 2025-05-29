@@ -1,12 +1,12 @@
-import singleton from './creational/singleton';
-import adapter from './structural/adapter';
+import creational from './designPatterns/creational';
+import structural from './designPatterns/structural';
 
 const designPatterns = {
   "Creational": {
-    ...singleton
+    ...creational
   },
   "Structural": {
-    ...adapter
+    ...structural
   }
 };
 

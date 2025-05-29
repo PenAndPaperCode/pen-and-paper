@@ -1,4 +1,4 @@
-const adapter = {
+const structural = {
   "Adapter": {
     youtube: "https://youtu.be/example_adapter",
     platform: "YouTube",
@@ -6,4 +6,4 @@ const adapter = {
   }
 };
 
-export default adapter;
+export default structural;

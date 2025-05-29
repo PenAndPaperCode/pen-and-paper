@@ -1,4 +1,4 @@
-const implementation = {
+const keyValue = {
   "Key-Value Store Implementation": {
     youtube: "https://youtu.be/example_key_value",
     platform: "YouTube",
@@ -6,4 +6,4 @@ const implementation = {
   }
 };
 
-export default implementation;
+export default keyValue;

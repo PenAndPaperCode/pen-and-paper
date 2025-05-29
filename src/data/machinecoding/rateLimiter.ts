@@ -1,12 +1,12 @@
-import tokenBucketAlgorithm from './tokenBucket/algorithm';
-import leakyBucketAlgorithm from './leakyBucket/algorithm';
+import tokenBucket from './rateLimiter/tokenBucket';
+import leakyBucket from './rateLimiter/leakyBucket';
 
 const rateLimiter = {
   "Token Bucket": {
-    ...tokenBucketAlgorithm
+    ...tokenBucket
   },
   "Leaky Bucket": {
-    ...leakyBucketAlgorithm
+    ...leakyBucket
   }
 };
 

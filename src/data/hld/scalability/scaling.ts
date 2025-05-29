@@ -1,4 +1,4 @@
-const horizontalVertical = {
+const scaling = {
   "Horizontal vs Vertical Scaling": {
     youtube: "https://youtu.be/example_scaling",
     platform: "YouTube",
@@ -6,4 +6,4 @@ const horizontalVertical = {
   }
 };
 
-export default horizontalVertical;
+export default scaling;

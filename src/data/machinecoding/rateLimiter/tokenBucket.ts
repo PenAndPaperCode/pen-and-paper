@@ -1,4 +1,4 @@
-const algorithm = {
+const tokenBucket = {
   "Token Bucket Algorithm": {
     youtube: "https://youtu.be/example_token_bucket",
     platform: "YouTube",
@@ -6,4 +6,4 @@ const algorithm = {
   }
 };
 
-export default algorithm;
+export default tokenBucket;

@@ -1,4 +1,4 @@
-const techniques = {
+const loadBalancing = {
   "Load Balancing Techniques": {
     youtube: "https://youtu.be/example_lb",
     platform: "System Design Interview",
@@ -6,4 +6,4 @@ const techniques = {
   }
 };
 
-export default techniques;
+export default loadBalancing;

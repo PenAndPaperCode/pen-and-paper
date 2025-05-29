@@ -1,4 +1,4 @@
-const implementation = {
+const documentBased = {
   "Document Store Implementation": {
     youtube: "https://youtu.be/example_document_store",
     platform: "YouTube",
@@ -6,4 +6,4 @@ const implementation = {
   }
 };
 
-export default implementation;
+export default documentBased;

@@ -1,12 +1,12 @@
-import keyValueImplementation from './keyValue/implementation';
-import documentBasedImplementation from './documentBased/implementation';
+import keyValue from './inMemoryDB/keyValue';
+import documentBased from './inMemoryDB/documentBased';
 
 const inMemoryDB = {
   "Key-Value Store": {
-    ...keyValueImplementation
+    ...keyValue
   },
   "Document Store": {
-    ...documentBasedImplementation
+    ...documentBased
   }
 };
 
