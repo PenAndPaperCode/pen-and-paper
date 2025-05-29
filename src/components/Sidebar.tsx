@@ -1,4 +1,4 @@
-import React, { memo, useCallback, useState } from 'react';
+import React, { memo, useCallback, useState, useEffect } from 'react';
 import { AppData } from '../types';
 
 interface SidebarProps {
@@ -20,6 +20,16 @@ const Sidebar: React.FC<SidebarProps> = memo(({
 }) => {
   const [expandedTopics, setExpandedTopics] = useState<Record<string, boolean>>({});
   const [selectedSubtopic, setLocalSelectedSubtopic] = useState<string | null>(null);
+
+  // Ensure topic is expanded when selected
+  useEffect(() => {
+    if (selectedTopic) {
+      setExpandedTopics(prev => ({
+        ...prev,
+        [selectedTopic]: true
+      }));
+    }
+  }, [selectedTopic]);
 
   const handleCategoryClick = useCallback((category: keyof AppData) => {
     setSelectedCategory(prevCategory => {
@@ -48,19 +58,17 @@ const Sidebar: React.FC<SidebarProps> = memo(({
       return topic;
     });
 
-    // Toggle expanded state for this topic
+    // Always expand the topic when clicked
     setExpandedTopics(prev => ({
       ...prev,
-      [topic]: !prev[topic]
+      [topic]: true
     }));
   }, [setSelectedTopic, setSelectedSubtopic]);
 
   const handleSubtopicClick = useCallback((subtopic: string) => {
-    setSelectedSubtopic(prevSubtopic => {
-      const newValue = prevSubtopic === subtopic ? null : subtopic;
-      setLocalSelectedSubtopic(newValue);
-      return newValue;
-    });
+    // Always set the subtopic, never toggle it off when clicking the same one
+    setSelectedSubtopic(subtopic);
+    setLocalSelectedSubtopic(subtopic);
   }, [setSelectedSubtopic]);
 
   return (
