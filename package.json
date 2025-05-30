@@ -1,4 +1,7 @@
 {
+  "homepage": "https://your-github-username.github.io/pen-and-paper",
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d build",
   "name": "pen-and-paper",
   "version": "0.1.0",
   "private": true,
@@ -17,6 +20,7 @@
     "eslint": "^8.38.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-react": "^7.32.2",
+    "gh-pages": "^6.3.0",
     "husky": "^8.0.3",
     "lint-staged": "^13.2.1",
     "prettier": "^2.8.7",
