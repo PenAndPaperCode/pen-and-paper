@@ -1,0 +1,64 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# production
+/build
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+
+# Build output
+dist/
+build/
+
+# Environment variables
+.env
+.env.*
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Mac system files
+.DS_Store
+
+# VS Code settings (optional)
+.vscode/
+
+# IDE files (optional, for JetBrains, etc.)
+.idea/
+
+# Coverage reports (from testing)
+coverage/
+
+# Misc
+*.local
+*.log
+*.tsbuildinfo
+
+# Dependency directories created by package managers
+.pnp/
+.pnp.js
+
+# Optional: lock file (only if you don't want to commit lock files)
+yarn.lock
+package-lock.json
+pnpm-lock.yaml
