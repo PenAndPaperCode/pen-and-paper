@@ -47,6 +47,12 @@ const Welcome: React.FC<WelcomeProps> = ({ category, topic, setSelectedCategory 
               This section covers common machine coding problems and their implementations.
             </p>
           )}
+          {category === 'MultiThreading' && (
+            <p className="text-gray-300">
+              MultiThreading focuses on concurrent programming and parallel execution. 
+              This section covers thread management, synchronization, and common concurrency patterns and problems.
+            </p>
+          )}
         </div>
       </div>
     );
@@ -110,6 +116,19 @@ const Welcome: React.FC<WelcomeProps> = ({ category, topic, setSelectedCategory 
           <h2 className="text-2xl font-semibold mb-2">Machine Coding</h2>
           <p className="text-gray-300">
             Practice implementing real-world applications with our machine coding challenges.
+          </p>
+        </div>
+
+        <div 
+          className="bg-gray-800 p-6 rounded-lg cursor-pointer transition-all duration-300 hover:bg-gray-700 hover:shadow-lg transform hover:scale-105 md:col-span-2"
+          onClick={() => handleCategoryClick('MultiThreading')}
+          role="button"
+          aria-label="Select MultiThreading category"
+          tabIndex={0}
+        >
+          <h2 className="text-2xl font-semibold mb-2">MultiThreading</h2>
+          <p className="text-gray-300">
+            Master concurrent programming with thread management, synchronization, and concurrency patterns.
           </p>
         </div>
       </div>

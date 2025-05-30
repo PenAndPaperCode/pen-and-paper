@@ -1,8 +1,13 @@
 const basics = {
-  "Factorial": {
-    youtube: "https://youtu.be/example_factorial",
+  "Recursion Topics To Cover": {
+    youtube: "",
     platform: "LeetCode",
-    github: "https://github.com/example_factorial",
+    github: "",
+  },
+  "Recursion Basics": {
+   youtube: "https://youtu.be/example_factorial",
+   platform: "LeetCode",
+   github: "",
   }
 };
 

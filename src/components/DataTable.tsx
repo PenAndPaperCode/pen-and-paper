@@ -30,14 +30,14 @@ const DataTable: React.FC<DataTableProps> = ({
     console.log('Data structure:', data[selectedCategory]?.[selectedTopic]);
   }, [selectedCategory, selectedTopic, selectedSubtopic, data]);
 
-  // Get the appropriate data based on category
-  const getProblem = (): ProblemWithName | null => {
+  // Get all problems for the selected category, topic, and subtopic
+  const getProblems = (): ProblemWithName[] => {
     try {
       // All categories now have a three-level structure
       if (!data[selectedCategory]?.[selectedTopic]) {
         // eslint-disable-next-line no-console
         console.error(`Topic "${selectedTopic}" not found in ${selectedCategory} data`);
-        return null;
+        return [];
       }
       
       // If subtopic is provided, use it
@@ -46,39 +46,33 @@ const DataTable: React.FC<DataTableProps> = ({
         if (!subtopicData) {
           // eslint-disable-next-line no-console
           console.error(`Subtopic "${selectedSubtopic}" not found in "${selectedTopic}"`);
-          return null;
+          return [];
         }
         
-        // Get the first problem from the subtopic
-        const firstProblemKey = Object.keys(subtopicData)[0];
-        if (!firstProblemKey) return null;
-        
-        return {
-          name: firstProblemKey,
-          ...(subtopicData[firstProblemKey] as LearningResource)
-        };
+        // Get all problems from the subtopic
+        return Object.keys(subtopicData).map(problemKey => ({
+          name: problemKey,
+          ...(subtopicData[problemKey] as LearningResource)
+        }));
       } else {
         // If no subtopic, get the first problem from the first subtopic
         const firstSubtopic = Object.keys(data[selectedCategory][selectedTopic])[0];
-        if (!firstSubtopic) return null;
+        if (!firstSubtopic) return [];
         
         const subtopicData = data[selectedCategory][selectedTopic][firstSubtopic];
-        const firstProblemKey = Object.keys(subtopicData)[0];
-        if (!firstProblemKey) return null;
-        
-        return {
-          name: `${firstSubtopic}: ${firstProblemKey}`,
-          ...(subtopicData[firstProblemKey] as LearningResource)
-        };
+        return Object.keys(subtopicData).map(problemKey => ({
+          name: `${firstSubtopic}: ${problemKey}`,
+          ...(subtopicData[problemKey] as LearningResource)
+        }));
       }
     } catch (error) {
       // eslint-disable-next-line no-console
       console.error('Error accessing data:', error);
-      return null;
+      return [];
     }
   };
 
-  const problem = getProblem();
+  const problems = getProblems();
 
   const handleStatusChange = useCallback((problemKey: string) => {
     setDoneStatus((prev) => ({
@@ -87,7 +81,7 @@ const DataTable: React.FC<DataTableProps> = ({
     }));
   }, [setDoneStatus]);
 
-  if (!problem) {
+  if (problems.length === 0) {
     return (
       <div className="mt-4 text-gray-400">
         No problems found. Please check the console for any errors.
@@ -95,12 +89,9 @@ const DataTable: React.FC<DataTableProps> = ({
     );
   }
 
-  const problemKey = `${selectedCategory}_${selectedTopic}_${selectedSubtopic}_${problem.name}`;
-  const isCompleted = doneStatus[problemKey] || false;
-
   return (
     <div className="overflow-x-auto">
-      <table className="mt-4 w-full border border-gray-600 rounded-lg shadow-sm text-white" aria-label={`Problem for ${selectedSubtopic || selectedTopic}`}>
+      <table className="mt-4 w-full border border-gray-600 rounded-lg shadow-sm text-white" aria-label={`Problems for ${selectedSubtopic || selectedTopic}`}>
         <thead className="bg-gray-800">
           <tr>
             <th className="border border-gray-600 px-4 py-2 text-left">
@@ -117,57 +108,77 @@ const DataTable: React.FC<DataTableProps> = ({
           </tr>
         </thead>
         <tbody>
-          <tr className="hover:bg-gray-700 transition">
-            <td className="border border-gray-600 px-4 py-2">{problem.name}</td>
-            <td className="border border-gray-600 px-4 py-2">
-              {problem.youtube && problem.youtube !== '#' ? (
-                <a
-                  href={problem.youtube}
-                  className="text-blue-400 hover:underline"
-                  target="_blank"
-                  rel="noreferrer"
-                  aria-label={`YouTube tutorial for ${problem.name}`}
-                >
-                  YouTube
-                </a>
-              ) : (
-                <span className="text-gray-500">Not available</span>
-              )}
-            </td>
-            <td className="border border-gray-600 px-4 py-2">
-              {problem.platform}
-            </td>
-            <td className="border border-gray-600 px-4 py-2">
-              {problem.github && problem.github !== '#' ? (
-                <a
-                  href={problem.github}
-                  className="text-blue-400 hover:underline"
-                  target="_blank"
-                  rel="noreferrer"
-                  aria-label={`GitHub code for ${problem.name}`}
-                >
-                  GitHub
-                </a>
-              ) : (
-                <span className="text-gray-500">Not available</span>
-              )}
-            </td>
-            <td className="border border-gray-600 px-4 py-2 text-center">
-              <div className="flex items-center justify-center">
-                <input
-                  id={`checkbox-${problemKey}`}
-                  type="checkbox"
-                  checked={isCompleted}
-                  onChange={() => handleStatusChange(problemKey)}
-                  aria-label={`Mark ${problem.name} as ${isCompleted ? 'incomplete' : 'complete'}`}
-                  className="w-4 h-4"
-                />
-                <label htmlFor={`checkbox-${problemKey}`} className="sr-only">
-                  Mark as {isCompleted ? 'incomplete' : 'complete'}
-                </label>
-              </div>
-            </td>
-          </tr>
+          {problems.map((problem) => {
+            const problemKey = `${selectedCategory}_${selectedTopic}_${selectedSubtopic}_${problem.name}`;
+            const isCompleted = doneStatus[problemKey] || false;
+            
+            return (
+              <tr key={problemKey} className="hover:bg-gray-700 transition">
+                <td className="border border-gray-600 px-4 py-2">{problem.name}</td>
+                <td className="border border-gray-600 px-4 py-2">
+                  {problem.youtube && problem.youtube !== 'NA' && problem.youtube.startsWith('http') ? (
+                    <a
+                      href={problem.youtube}
+                      className="text-blue-400 hover:underline"
+                      target="_blank"
+                      rel="noreferrer"
+                      aria-label={`YouTube tutorial for ${problem.name}`}
+                    >
+                      YouTube
+                    </a>
+                  ) : (
+                    <span className="text-gray-500">{problem.youtube}</span>
+                  )}
+                </td>
+                <td className="border border-gray-600 px-4 py-2">
+                  {problem.platform && problem.platform !== 'NA' && problem.platform.startsWith('http') ? (
+                    <a
+                      href={problem.platform}
+                      className="text-blue-400 hover:underline"
+                      target="_blank"
+                      rel="noreferrer"
+                      aria-label={`Platform link for ${problem.name}`}
+                    >
+                      {problem.platform.includes('geeksforgeeks') || problem.platform.includes('leetcode') ? 'Practice Here' : 
+                       'Problem Link'}
+                    </a>
+                  ) : (
+                    problem.platform
+                  )}
+                </td>
+                <td className="border border-gray-600 px-4 py-2">
+                  {problem.github && problem.github !== 'NA' && problem.github.startsWith('http') ? (
+                    <a
+                      href={problem.github}
+                      className="text-blue-400 hover:underline"
+                      target="_blank"
+                      rel="noreferrer"
+                      aria-label={`GitHub code for ${problem.name}`}
+                    >
+                      GitHub
+                    </a>
+                  ) : (
+                    <span className="text-gray-500">{problem.github}</span>
+                  )}
+                </td>
+                <td className="border border-gray-600 px-4 py-2 text-center">
+                  <div className="flex items-center justify-center">
+                    <input
+                      id={`checkbox-${problemKey}`}
+                      type="checkbox"
+                      checked={isCompleted}
+                      onChange={() => handleStatusChange(problemKey)}
+                      aria-label={`Mark ${problem.name} as ${isCompleted ? 'incomplete' : 'complete'}`}
+                      className="w-4 h-4"
+                    />
+                    <label htmlFor={`checkbox-${problemKey}`} className="sr-only">
+                      Mark as {isCompleted ? 'incomplete' : 'complete'}
+                    </label>
+                  </div>
+                </td>
+              </tr>
+            );
+          })}
         </tbody>
       </table>
     </div>

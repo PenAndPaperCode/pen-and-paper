@@ -1,21 +1,21 @@
 /**
  * @fileoverview High Level Design (HLD) data module
  * 
- * This file aggregates all HLD system designs and architectures.
+ * This file aggregates all HLD topics and implementations.
  */
 
 import { HLDData } from '../types';
 
 // Import HLD data from existing files
-import scalability from './hld/scalability';
-import dataStorage from './hld/dataStorage';
+import basics from './hld/basics';
+import advance from './hld/advance';
 
 /**
- * Complete collection of HLD topics with subtopics
+ * Complete collection of HLD topics
  */
 const hldData: HLDData = {
-  "Scalability": scalability,
-  "Data Storage": dataStorage
+  "Basics": basics,
+  "Advanced": advance
 };
 
 export default hldData;

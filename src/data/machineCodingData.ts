@@ -1,22 +1,21 @@
 /**
  * @fileoverview Machine Coding data module
  * 
- * This file aggregates all machine coding components and implementations.
+ * This file aggregates all Machine Coding topics and implementations.
  */
 
 import { MachineCodingData } from '../types';
 
-// Direct imports for main categories
-import rateLimiter from './machinecoding/rateLimiter';
-import inMemoryDB from './machinecoding/inMemoryDB';
+// Import Machine Coding data from existing files
+import basics from './machinecoding/basics';
+import advance from './machinecoding/advance';
 
 /**
- * Complete collection of machine coding topics organized by category
- * Only Rate Limiter and In-Memory DB are currently active
+ * Complete collection of Machine Coding topics
  */
 const machineCodingData: MachineCodingData = {
-  "Rate Limiter": rateLimiter,
-  "In-Memory DB": inMemoryDB
+  "Basics": basics,
+  "Advanced": advance
 };
 
 export default machineCodingData;

@@ -12,6 +12,7 @@ import dsaData from './data/dsaData';
 import lldData from './data/lldData';
 import hldData from './data/hldData';
 import machineCodingData from './data/machineCodingData';
+import multithreadingData from './data/multithreadingData';
 
 // Memoize data object
 const data: AppData = {
@@ -19,6 +20,7 @@ const data: AppData = {
   LLD: lldData,
   HLD: hldData,
   "Machine Coding": machineCodingData,
+  "MultiThreading": multithreadingData
 };
 
 const App: React.FC = () => {
@@ -38,7 +40,8 @@ const App: React.FC = () => {
       DSA: Object.keys(data.DSA),
       LLD: Object.keys(data.LLD),
       HLD: Object.keys(data.HLD),
-      "Machine Coding": Object.keys(data["Machine Coding"])
+      "Machine Coding": Object.keys(data["Machine Coding"]),
+      "MultiThreading": Object.keys(data["MultiThreading"])
     });
   }, []);
 

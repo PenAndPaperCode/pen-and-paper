@@ -41,12 +41,22 @@ export interface MachineCodingData {
   };
 }
 
+// Data structure types for MultiThreading
+export interface MultithreadingData {
+  [topic: string]: {
+    [subtopic: string]: {
+      [problemName: string]: LearningResource;
+    };
+  };
+}
+
 // Combined data type for the application
 export interface AppData {
   DSA: DSAData;
   LLD: LLDData;
   HLD: HLDData;
   "Machine Coding": MachineCodingData;
+  "MultiThreading": MultithreadingData;
 }
 
 // Type for tracking completion status

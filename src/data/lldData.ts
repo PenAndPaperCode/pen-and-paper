@@ -1,20 +1,21 @@
 /**
  * @fileoverview Low Level Design (LLD) data module
  * 
- * This file aggregates all LLD design patterns and implementations.
+ * This file aggregates all LLD topics and implementations.
  */
 
 import { LLDData } from '../types';
 
-// Direct import from design patterns
-import designPatterns from './lld/designPatterns';
+// Import LLD data from existing files
+import basics from './lld/basics';
+import advance from './lld/advance';
 
 /**
  * Complete collection of LLD topics
- * Only Design Patterns is currently active
  */
 const lldData: LLDData = {
-  "Design Patterns": designPatterns
+  "Basics": basics,
+  "Advanced": advance
 };
 
 export default lldData;
