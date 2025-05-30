@@ -1,5 +1,5 @@
 {
-  "homepage": "https://your-github-username.github.io/pen-and-paper",
+  "homepage": "https://PenAndPaperCode.github.io/pen-and-paper",
   "predeploy": "npm run build",
   "deploy": "gh-pages -d build",
   "name": "pen-and-paper",
