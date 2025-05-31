@@ -2,7 +2,7 @@
   "name": "pen-and-paper",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://penpaperpreparation.com",
+  "homepage": "https://PenAndPaperCode.github.io/pen-and-paper",
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
