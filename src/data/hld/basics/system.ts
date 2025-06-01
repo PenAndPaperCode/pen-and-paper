@@ -1,49 +1,49 @@
-const storage = {
+const system = {
   "Fundamentals": {
     youtube: "",
     platform: "",
     github: "",
   },
-  "SQL vs NoSQL Databases": {
+  "Simplest HLD": {
     youtube: "",
     platform: "",
     github: "",
   },
-  "Data Model and DB to Store": {
+  "Load Balancer": {
     youtube: "",
     platform: "",
     github: "",
   },
-  "Data Modeling": {
+  "Availability": {
     youtube: "",
     platform: "",
     github: "",
   },
-  "Database Optimization": {
+  "Scalability": {
     youtube: "",
     platform: "",
     github: "",
   },
-  "Blob Storage": {
+  "Performance": {
     youtube: "",
     platform: "",
     github: "",
   },
-  "Database Sharding": {
+  "Queue": {
     youtube: "",
     platform: "",
     github: "",
   },
-  "Consistent Hashing": {
+  "Design Maintainable System": {
     youtube: "",
     platform: "",
     github: "",
   },
-  "Caching Basics": {
+  "HLD Interview Guide": {
     youtube: "",
     platform: "",
     github: "",
   }
 };
 
-export default storage;
+export default system;

@@ -1,49 +1,49 @@
-const storage = {
+const networking = {
   "Fundamentals": {
     youtube: "",
     platform: "",
     github: "",
   },
-  "SQL vs NoSQL Databases": {
+  "OSI Models": {
     youtube: "",
     platform: "",
     github: "",
   },
-  "Data Model and DB to Store": {
+  "Physical Layer": {
     youtube: "",
     platform: "",
     github: "",
   },
-  "Data Modeling": {
+  "Link Layer": {
     youtube: "",
     platform: "",
     github: "",
   },
-  "Database Optimization": {
+  "Network Layer": {
     youtube: "",
     platform: "",
     github: "",
   },
-  "Blob Storage": {
+  "Session Layer": {
     youtube: "",
     platform: "",
     github: "",
   },
-  "Database Sharding": {
+  "Presentation Layer": {
     youtube: "",
     platform: "",
     github: "",
   },
-  "Consistent Hashing": {
+  "Application Layer": {
     youtube: "",
     platform: "",
     github: "",
   },
-  "Caching Basics": {
+  "UDP / TCP": {
     youtube: "",
     platform: "",
     github: "",
   }
 };
 
-export default storage;
+export default networking;

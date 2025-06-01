@@ -1,49 +1,49 @@
-const storage = {
+const api = {
   "Fundamentals": {
     youtube: "",
     platform: "",
     github: "",
   },
-  "SQL vs NoSQL Databases": {
+  "API Designing": {
     youtube: "",
     platform: "",
     github: "",
   },
-  "Data Model and DB to Store": {
+  "REST API": {
     youtube: "",
     platform: "",
     github: "",
   },
-  "Data Modeling": {
+  "Scalability": {
     youtube: "",
     platform: "",
     github: "",
   },
-  "Database Optimization": {
+  "Availability": {
     youtube: "",
     platform: "",
     github: "",
   },
-  "Blob Storage": {
+  "Performance": {
     youtube: "",
     platform: "",
     github: "",
   },
-  "Database Sharding": {
+  "Pagination": {
     youtube: "",
     platform: "",
     github: "",
   },
-  "Consistent Hashing": {
+  "Short & Long Polling / WebSocket": {
     youtube: "",
     platform: "",
     github: "",
   },
-  "Caching Basics": {
+  "Http / Https": {
     youtube: "",
     platform: "",
     github: "",
-  }
+  },
 };
 
-export default storage;
+export default api;
