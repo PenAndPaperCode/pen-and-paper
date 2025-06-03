@@ -1,64 +1,59 @@
-const fundamentals = {
-  "Introduction": {
+const problem = {
+  "LRU Cache": {
     youtube: "",
     platform: "",
     github: "",
   },
-  "ALL About An LLD Round": {
+  "LFU Cache": {
     youtube: "",
     platform: "",
     github: "",
   },
-  "How Compiler executes a Program ?": {
+  "Multi Level Cache": {
     youtube: "",
     platform: "",
     github: "",
   },
-  "How GC works ?": {
+  "Tic-Tac-Toe": {
     youtube: "",
     platform: "",
     github: "",
   },
-  "SOLID Principle": {
+  "Snake ladder": {
     youtube: "",
     platform: "",
     github: "",
   },
-  "Dependency Injection": {
+  "Design A Pizza Shop": {
     youtube: "",
     platform: "",
     github: "",
   },
-  "Coding Best Practises": {
+  "Design A Coffee Shop": {
     youtube: "",
     platform: "",
     github: "",
   },
-  "Type of Relationships between classes": {
+  "Design A Logger": {
     youtube: "",
     platform: "",
     github: "",
   },
-  "LLD Schema Designing": {
+  "Sudoku Application": {
     youtube: "",
     platform: "",
     github: "",
   },
-  "LLD API Designing": {
+  "Parking Lot": {
     youtube: "",
     platform: "",
     github: "",
   },
-  "LLD Service Designing": {
-    youtube: "",
-    platform: "",
-    github: "",
-  },
-  "Versioning And Maintainability": {
+  "Hotel Booking System": {
     youtube: "",
     platform: "",
     github: "",
   },
 };
 
-export default fundamentals;
+export default problem;

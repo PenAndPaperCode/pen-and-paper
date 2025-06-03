@@ -4,12 +4,22 @@ const architecture = {
     platform: "NA",
     github: "NA",
   },
-  "Microservices vs Monolith": {
+  "Microservices": {
     youtube: "https://youtu.be/example_microservices",
     platform: "NA",
     github: "NA",
   },
-  "API Gateway Pattern": {
+  "Monolithic": {
+    youtube: "https://youtu.be/example_microservices",
+    platform: "NA",
+    github: "NA",
+  },
+  "Microservice vs Monolithic": {
+    youtube: "https://youtu.be/example_microservices",
+    platform: "NA",
+    github: "NA",
+  },
+  "Event Based Architecture": {
     youtube: "https://youtu.be/example_api_gateway",
     platform: "NA",
     github: "NA",

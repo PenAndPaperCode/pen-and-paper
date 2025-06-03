@@ -1,0 +1,18 @@
+To convert the SVG to favicon formats, you can use one of these methods:
+
+Option 1: Use an online favicon generator
+1. Go to https://realfavicongenerator.net/ or https://favicon.io/
+2. Upload the SVG file we created (temp_icons/favicon.svg)
+3. Download the generated package
+4. Replace the files in your public directory with the generated ones
+
+Option 2: Use ImageMagick locally (if installed)
+1. Convert to favicon.ico:
+   convert -background transparent temp_icons/favicon.svg -define icon:auto-resize=64,48,32,16 public/favicon.ico
+
+2. Convert to PNG files:
+   convert -background transparent temp_icons/favicon.svg -resize 192x192 public/logo192.png
+   convert -background transparent temp_icons/favicon.svg -resize 512x512 public/logo512.png
+
+After generating the files, make sure to deploy your application again with:
+npm run deploy

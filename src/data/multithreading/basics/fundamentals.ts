@@ -1,18 +1,48 @@
 const fundamentals = {
-  "Thread Creation and Lifecycle": {
-    youtube: "https://youtu.be/example_thread_lifecycle",
-    platform: "NA",
-    github: "NA",
+  "Introduction": {
+    youtube: "",
+    platform: "",
+    github: "",
   },
-  "Synchronization Basics": {
-    youtube: "https://youtu.be/example_sync_basics",
-    platform: "NA",
-    github: "NA",
+  "Multi Threading": {
+    youtube: "",
+    platform: "",
+    github: "",
   },
-  "Thread Safety": {
-    youtube: "https://youtu.be/example_thread_safety",
-    platform: "NA",
-    github: "NA",
+  "Multi Processing": {
+    youtube: "",
+    platform: "",
+    github: "",
+  },
+  "Multi Tasking": {
+    youtube: "",
+    platform: "",
+    github: "",
+  },
+  "Process": {
+    youtube: "",
+    platform: "",
+    github: "",
+  },
+  "Thread": {
+    youtube: "",
+    platform: "",
+    github: "",
+  },
+  "Thread Communication": {
+    youtube: "",
+    platform: "",
+    github: "",
+  },
+  "RACE Condition": {
+    youtube: "",
+    platform: "",
+    github: "",
+  },
+  "Deadlock": {
+    youtube: "",
+    platform: "",
+    github: "",
   }
 };
 

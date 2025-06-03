@@ -1,12 +1,13 @@
 import scalability from './advance/scalability';
-import reliability from './advance/reliability';
+import problem from './advance/problem';
+import theory from './advance/theory';
 
 const advance = {
-  "Scalability": {
-    ...scalability
+  "Theory": {
+    ...theory
   },
-  "Reliability": {
-    ...reliability
+  "Problems": {
+    ...problem
   }
 };
 

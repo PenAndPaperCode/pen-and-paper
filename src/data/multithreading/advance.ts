@@ -1,11 +1,7 @@
-import patterns from './advance/patterns';
 import problems from './advance/problems';
 
 const advance = {
-  "Concurrency Patterns": {
-    ...patterns
-  },
-  "Classic Problems": {
+  "Concurrency Problems": {
     ...problems
   }
 };

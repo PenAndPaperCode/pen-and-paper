@@ -2,11 +2,8 @@ import fundamentals from './basics/fundamentals';
 import concurrency from './basics/concurrency';
 
 const basics = {
-  "Thread Fundamentals": {
+  "Multithreading Concepts": {
     ...fundamentals
-  },
-  "Concurrency Concepts": {
-    ...concurrency
   }
 };
 

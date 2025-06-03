@@ -1,28 +1,33 @@
 const designPatterns = {
   "Singleton Pattern": {
-    youtube: "https://youtu.be/example_singleton",
-    platform: "NA",
-    github: "NA",
+    youtube: "",
+    platform: "",
+    github: "",
   },
   "Factory Pattern": {
-    youtube: "https://youtu.be/example_factory",
-    platform: "NA",
-    github: "NA",
+    youtube: "",
+    platform: "",
+    github: "",
   },
   "Observer Pattern": {
-    youtube: "https://youtu.be/example_observer",
-    platform: "NA",
-    github: "NA",
+    youtube: "",
+    platform: "",
+    github: "",
   },
   "Strategy Pattern": {
-    youtube: "https://youtu.be/example_strategy",
-    platform: "NA",
-    github: "NA",
+    youtube: "",
+    platform: "",
+    github: "",
+  },
+  "Chain Of Responsibility Pattern": {
+    youtube: "",
+    platform: "",
+    github: "",
   },
   "Adapter Pattern": {
-    youtube: "https://youtu.be/example_adapter",
-    platform: "NA",
-    github: "NA",
+    youtube: "",
+    platform: "",
+    github: "",
   }
 };
 
