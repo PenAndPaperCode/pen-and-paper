@@ -114,7 +114,7 @@ const Sidebar: React.FC<SidebarProps> = memo(({
                               }`}
                               onClick={() => handleSubtopicClick(subtopic)}
                             >
-                              {subtopic}
+                              <em>{subtopic}</em>
                             </button>
                           </li>
                         ))}

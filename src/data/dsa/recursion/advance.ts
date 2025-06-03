@@ -1,9 +1,34 @@
 const advance = {
-  "Tower of Hanoi": {
-    youtube: "https://youtu.be/example_hanoi",
-    platform: "LeetCode",
-    github: "https://github.com/example_hanoi",
-  }
+  "Permutation of Numbers": {
+    youtube: "",
+    platform: "",
+    github: "",
+  },
+  "Palindrome Partition": {
+    youtube: "",
+    platform: "",
+    github: "",
+  },
+  "N Queen Problem": {
+    youtube: "",
+    platform: "",
+    github: "",
+  },
+  "Generate Parenthesis": {
+    youtube: "",
+    platform: "",
+    github: "",
+  },
+  "Sudoku": {
+    youtube: "",
+    platform: "",
+    github: "",
+  },
+  "Tower Of Hanoi": {
+    youtube: "",
+    platform: "",
+    github: "",
+  },
 };
 
 export default advance;
