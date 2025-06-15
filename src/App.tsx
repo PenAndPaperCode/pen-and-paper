@@ -17,8 +17,8 @@ import multithreadingData from './data/multithreadingData';
 // Memoize data object
 const data: AppData = {
   DSA: dsaData,
-  LLD: lldData,
   HLD: hldData,
+  LLD: lldData,
   "Machine Coding": machineCodingData,
   "MultiThreading": multithreadingData
 };

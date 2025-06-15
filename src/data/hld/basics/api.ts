@@ -4,6 +4,16 @@ const api = {
     platform: "",
     github: "",
   },
+  "Http / Https": {
+    youtube: "",
+    platform: "",
+    github: "",
+  },
+  "HTTP1 / HTTP2 / HTTP3": {
+    youtube: "",
+    platform: "",
+    github: "",
+  },
   "API Designing": {
     youtube: "",
     platform: "",
@@ -35,11 +45,6 @@ const api = {
     github: "",
   },
   "Short & Long Polling / WebSocket": {
-    youtube: "",
-    platform: "",
-    github: "",
-  },
-  "Http / Https": {
     youtube: "",
     platform: "",
     github: "",

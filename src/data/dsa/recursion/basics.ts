@@ -10,62 +10,32 @@ const basics = {
     github: "",
   },
   "Recursion Stack": {
-   youtube: "",
+   youtube: "https://youtu.be/vL-uxTbErGM",
    platform: "",
    github: "",
   },
   "Recursion Tree": {
-   youtube: "",
+   youtube: "https://youtu.be/zirEM1pynE8",
    platform: "",
    github: "",
   },
   "Recursion Code Template": {
-   youtube: "",
+   youtube: "https://youtu.be/1BcYkcCpBpI",
    platform: "",
    github: "",
   },
   "Importance Of Base Case": {
-   youtube: "",
+   youtube: "https://youtu.be/CwIskwNz9IQ",
    platform: "",
    github: "",
   },
   "Must Do Basic Example": {
-   youtube: "",
+   youtube: "https://youtu.be/HtblVtn8Csk",
    platform: "",
    github: "",
   },
   "Nth Fibonacci Number": {
-   youtube: "",
-   platform: "",
-   github: "",
-  },
-  "Recursion Problem Pattern": {
-   youtube: "",
-   platform: "",
-   github: "",
-  },
-  "Pattern 1: Find All subsequence": {
-   youtube: "",
-   platform: "",
-   github: "",
-  },
-  "Pattern 2: Check if subsequence exists ?": {
-   youtube: "",
-   platform: "",
-   github: "",
-  },
-  "Pattern 3: Find Any subsequence": {
-   youtube: "",
-   platform: "",
-   github: "",
-  },
-  "Pattern 4: Count number of subsequence": {
-   youtube: "",
-   platform: "",
-   github: "",
-  },
-  "Backtracking": {
-   youtube: "",
+   youtube: "https://youtu.be/WPw2sN3Csx4",
    platform: "",
    github: "",
   },
