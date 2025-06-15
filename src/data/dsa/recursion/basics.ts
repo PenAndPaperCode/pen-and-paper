@@ -31,12 +31,12 @@ const basics = {
   },
   "Must Do Basic Example": {
    youtube: "https://youtu.be/HtblVtn8Csk",
-   platform: "",
+   platform: "https://www.geeksforgeeks.org/problems/sum-of-series2811/1",
    github: "",
   },
   "Nth Fibonacci Number": {
    youtube: "https://youtu.be/WPw2sN3Csx4",
-   platform: "",
+   platform: "https://www.geeksforgeeks.org/problems/nth-fibonacci-number1335/1",
    github: "",
   },
 };

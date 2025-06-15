@@ -11,14 +11,15 @@ import { DSAData } from '../types';
 // Import category data
 import graphData from './dsa/graphData';
 import recursionData from './dsa/recursionData';
+import binarySearchData from './dsa/binarySearchData';
 
 /**
  * Complete collection of DSA topics organized by category
- * Only Graph and Recursion are currently active
  */
 const dsaData: DSAData = {
   Graph: graphData,
-  Recursion: recursionData
+  Recursion: recursionData,
+  "Binary Search": binarySearchData
 };
 
 export default dsaData;

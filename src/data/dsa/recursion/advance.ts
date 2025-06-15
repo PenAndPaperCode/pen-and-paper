@@ -6,67 +6,67 @@ const advance = {
   },
   "Pattern 1: Find All Subset": {
     youtube: "https://youtu.be/o2Hypq-pH-M",
-    platform: "",
+    platform: "https://leetcode.com/problems/subsets/description/",
     github: "",
   },
   "Pattern 2: Check if subsequence exists with sum K ?": {
     youtube: "https://youtu.be/CFydAHaerpA",
-    platform: "",
+    platform: "https://www.geeksforgeeks.org/problems/check-if-there-exists-a-subsequence-with-sum-k/1",
     github: "",
   },
   "Pattern 3: Count number of Subset with sum K": {
     youtube: "https://youtu.be/WQCDbbf0qug",
-    platform: "",
+    platform: "https://www.geeksforgeeks.org/problems/perfect-sum-problem5633/1",
     github: "",
   },
-  "Leetcode 39 | Combination Sum": {
+  "Combination Sum": {
     youtube: "https://youtu.be/iDO0Ddir5dc",
-    platform: "",
+    platform: "https://leetcode.com/problems/combination-sum/description/",
     github: "",
   },
-  "Leetcode 131 | Palindrome Partitioning": {
+  "Palindrome Partitioning": {
     youtube: "https://youtu.be/jNbIrwBwd4U",
-    platform: "",
+    platform: "https://leetcode.com/problems/palindrome-partitioning/description/",
     github: "",
   },
-  "Leetcode 22 | Generate Parenthesis": {
+  "Generate Parenthesis": {
     youtube: "https://www.youtube.com/watch?v=4fK0VwiAkM0&list=PLzgjz-Vfut5BvH9fhTlm55ISdXcsoV4SH&index=20",
-    platform: "",
+    platform: "https://leetcode.com/problems/generate-parentheses/description/",
     github: "",
   },
-  "Leetcode 22 | Generate Parenthesis | part 2": {
+  "Generate Parenthesis | part 2": {
     youtube: "https://www.youtube.com/watch?v=gEn2nNpDzrk&list=PLzgjz-Vfut5BvH9fhTlm55ISdXcsoV4SH&index=21",
-    platform: "",
+    platform: "https://leetcode.com/problems/generate-parentheses/description/",
     github: "",
   },
-  "Leetcode 17 | Letter Combination of a Phone number": {
+  "Letter Combination of a Phone number": {
     youtube: "https://youtu.be/IG8dUTEL5-s",
-    platform: "",
+    platform: "https://leetcode.com/problems/letter-combinations-of-a-phone-number/description/",
     github: "",
   },
-  "Leetcode 79 | Word Search": {
+  "Word Search": {
     youtube: "https://youtu.be/-4MhvHr4vwk",
-    platform: "",
+    platform: "https://leetcode.com/problems/word-search/description/",
     github: "",
   },
-  "Leetcode 46 | Permutation": {
+  "Permutation": {
     youtube: "https://youtu.be/tzMEIgq9wQU",
-    platform: "",
+    platform: "https://leetcode.com/problems/permutations/description/",
     github: "",
   },
-  "Leetcode 51 | N - Queens": {
+  "N - Queens": {
     youtube: "https://youtu.be/eZZ_VElAzwU",
-    platform: "",
+    platform: "https://leetcode.com/problems/n-queens/description/",
     github: "",
   },
-  "Sudoku": {
+  "Sudoku Solver": {
     youtube: "",
-    platform: "",
+    platform: "https://leetcode.com/problems/sudoku-solver/description/",
     github: "",
   },
   "Tower Of Hanoi": {
     youtube: "",
-    platform: "",
+    platform: "https://www.geeksforgeeks.org/problems/tower-of-hanoi-1587115621/1",
     github: "",
   },
   "Recursion Conclusion": {
