@@ -1,47 +1,37 @@
 const basics = {
   "Introduction to Binary Search": {
-    youtube: "",
+    youtube: "https://youtu.be/kCjfpssj79M",
     platform: "",
     github: "",
   },
   "All about Binary Search": {
-    youtube: "",
+    youtube: "https://youtu.be/BBXR2B-wFR4",
     platform: "",
     github: "",
   },
   "Simple binary search problem": {
-    youtube: "",
+    youtube: "https://youtu.be/WK5U9RGOBEE",
     platform: "",
     github: "",
   },
   "Binary Search Code Template": {
-    youtube: "",
+    youtube: "https://youtu.be/h4OZSy-X-CM",
     platform: "",
     github: "",
   },
   "Binary search problem patterns": {
-    youtube: "",
+    youtube: "https://youtu.be/mWPDY8jtQdc",
     platform: "",
     github: "",
   },
-  "BS Pattern 1 problem": {
-    youtube: "",
-    platform: "https://www.geeksforgeeks.org/problems/binary-search-1587115620/1",
-    github: "",
-  },
-  "BS Pattern 2 problem": {
-    youtube: "",
-    platform: "https://www.geeksforgeeks.org/problems/aggressive-cows/1",
-    github: "",
-  },
-  "BS Pattern 3 problem": {
-    youtube: "",
-    platform: "",
-    github: "",
-  },
-  "Search Insert Position": {
-    youtube: "",
+  "BS Pattern 1 problem | Search Insert Position": {
+    youtube: "https://youtu.be/drz5mBHMm5w",
     platform: "https://leetcode.com/problems/search-insert-position/description/",
+    github: "",
+  },
+  "BS Pattern 2 problem | Aggressive Cows": {
+    youtube: "https://youtu.be/ZYTs48FfD3Q",
+    platform: "https://www.geeksforgeeks.org/problems/aggressive-cows/1",
     github: "",
   },
   "Find First and Last Position of Element in Sorted Array": {
