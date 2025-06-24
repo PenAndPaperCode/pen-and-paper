@@ -35,32 +35,32 @@ const basics = {
     github: "",
   },
   "Find First and Last Position of Element in Sorted Array": {
-    youtube: "",
+    youtube: "https://youtu.be/9QiClk52LUs",
     platform: "https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/description/",
     github: "",
   },
   "Search in Rotated Sorted Array": {
-    youtube: "",
+    youtube: "https://youtu.be/R3RbLrKFc00",
     platform: "https://leetcode.com/problems/search-in-rotated-sorted-array/description/",
     github: "",
   },
   "Search in Rotated Sorted Array II": {
-    youtube: "",
+    youtube: "https://youtu.be/d3cF1JaruMY",
     platform: "https://leetcode.com/problems/search-in-rotated-sorted-array-ii/description/",
     github: "",
   },
   "Find how many times array has been rotated": {
-    youtube: "",
+    youtube: "https://youtu.be/lzLjg0qzcuU",
     platform: "https://www.geeksforgeeks.org/problems/rotation4723/1",
     github: "",
   },
   "Find Minimum in Rotated Sorted Array": {
-    youtube: "",
+    youtube: "https://youtu.be/ZI03DS5gWJc",
     platform: "https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/description/",
     github: "",
   },
   "Single Element in a Sorted Array": {
-    youtube: "",
+    youtube: "https://youtu.be/ckDM49-OwYA",
     platform: "https://leetcode.com/problems/single-element-in-a-sorted-array/description/",
     github: "",
   },

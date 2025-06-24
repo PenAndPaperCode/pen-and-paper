@@ -1,11 +1,11 @@
 const advance = {
   "Peak Index in a Mountain Array": {
-    youtube: "",
+    youtube: "https://youtu.be/hX8AV_xE4aQ",
     platform: "https://leetcode.com/problems/peak-index-in-a-mountain-array/description/",
     github: "",
   },
   "Find Peak Element": {
-    youtube: "",
+    youtube: "https://youtu.be/9QOb3cOfk0A",
     platform: "https://leetcode.com/problems/find-peak-element/description/",
     github: "",
   },
