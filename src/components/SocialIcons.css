@@ -1,0 +1,28 @@
+.social-icons-container {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.social-icon {
+  transition: transform 0.3s ease-in-out;
+  width: 36px;
+  height: 36px;
+  display: block;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+}
+
+/* Instagram gradient background */
+.instagram-icon {
+  fill: url(#instagram-gradient);
+  stroke: none;
+}
+
+/* YouTube red color */
+.youtube-icon {
+  fill: #FF0000;
+  stroke: none;
+}
