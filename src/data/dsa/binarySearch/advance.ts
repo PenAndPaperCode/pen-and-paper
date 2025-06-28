@@ -56,7 +56,7 @@ const advance = {
   },
   "Find a Peak Element II": {
     youtube: "",
-    platform: "https://leetcode.com/problems/find-a-peak-element-ii/description/",
+    platform: "https://leetcode.com/problems/find-a-peak-element-ii/",
     github: "",
   },
   "Time Based Key-Value Store": {

@@ -9,17 +9,49 @@
 import { DSAData } from '../types';
 
 // Import category data
-import graphData from './dsa/graphData';
-import recursionData from './dsa/recursionData';
+import arrayData from './dsa/arrayData';
 import binarySearchData from './dsa/binarySearchData';
+import binarySearchTreeData from './dsa/binarySearchTreeData';
+import binaryTreeData from './dsa/binaryTreeData';
+import bitManipulationData from './dsa/bitManipulationData';
+import dynamicProgrammingData from './dsa/dynamicProgrammingData';
+import graphData from './dsa/graphData';
+import greedyData from './dsa/greedyData';
+import hashMapPrefixData from './dsa/hashMapPrefixData';
+import heapData from './dsa/heapData';
+import linkedListData from './dsa/linkedListData';
+import mergeIntervalsData from './dsa/mergeIntervalsData';
+import prefixSumData from './dsa/prefixSumData';
+import queueData from './dsa/queueData';
+import recursionData from './dsa/recursionData';
+import stackData from './dsa/stackData';
+import stringData from './dsa/stringData';
+import trieData from './dsa/trieData';
+import twoPointerData from './dsa/twoPointerData';
 
 /**
- * Complete collection of DSA topics organized by category
+ * Complete collection of DSA topics organized by category in lexicographical order
  */
 const dsaData: DSAData = {
-  Graph: graphData,
-  Recursion: recursionData,
-  "Binary Search": binarySearchData
+  "Graph": graphData,
+  "Recursion": recursionData,
+  "Binary Search": binarySearchData,
+  "Array": arrayData,
+  "Binary Search Tree": binarySearchTreeData,
+  "Binary Tree": binaryTreeData,
+  "Bit Manipulation": bitManipulationData,
+  "Dynamic Programming": dynamicProgrammingData,
+  "Greedy": greedyData,
+  "HashMap + Prefix Patterns": hashMapPrefixData,
+  "Heap": heapData,
+  "Linked List": linkedListData,
+  "Merge Intervals": mergeIntervalsData,
+  "Prefix Sum": prefixSumData,
+  "Queue": queueData,
+  "Stack": stackData,
+  "String": stringData,
+  "Trie": trieData,
+  "Two Pointer": twoPointerData
 };
 
 export default dsaData;

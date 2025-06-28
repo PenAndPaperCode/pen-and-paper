@@ -104,7 +104,7 @@ const DataTable: React.FC<DataTableProps> = ({
               Platform
             </th>
             <th className="border border-gray-600 px-4 py-2 text-left">GitHub URL</th>
-            <th className="border border-gray-600 px-4 py-2 text-left">Done?</th>
+            <th className="border border-gray-600 px-4 py-2 text-left">Done ?</th>
           </tr>
         </thead>
         <tbody>
@@ -139,7 +139,7 @@ const DataTable: React.FC<DataTableProps> = ({
                       rel="noreferrer"
                       aria-label={`Platform link for ${problem.name}`}
                     >
-                      {problem.platform.includes('geeksforgeeks') || problem.platform.includes('leetcode') ? 'Practice Here' : 
+                      {problem.platform.includes('geeksforgeeks') || problem.platform.includes('leetcode') ? 'Practice' :
                        'Problem Link'}
                     </a>
                   ) : (
