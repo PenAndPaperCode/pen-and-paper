@@ -14,9 +14,24 @@ const basics = {
     platform: "",
     github: "",
   },
-  "Two Sum II - Input Array Is Sorted": {
+  "Pattern 1 (Opposite Direction) - Two Sum II": {
     youtube: "",
     platform: "https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/",
+    github: "",
+  },
+  "Pattern 2 (Sliding Window) - Longest Substring Without Repeating Characters": {
+    youtube: "",
+    platform: "https://leetcode.com/problems/longest-substring-without-repeating-characters/",
+    github: "",
+  },
+  "Pattern 3 (Expanding) - Longest Palindromic Substring": {
+    youtube: "",
+    platform: "https://leetcode.com/problems/longest-palindromic-substring/",
+    github: "",
+  },
+  "Pattern 4 (Slow Fast Pointer) - Find the Middle Index in Array": {
+    youtube: "",
+    platform: "https://leetcode.com/problems/find-the-middle-index-in-array/",
     github: "",
   },
   "Valid Palindrome": {
@@ -27,11 +42,6 @@ const basics = {
   "Remove Duplicates from Sorted Array": {
     youtube: "",
     platform: "https://leetcode.com/problems/remove-duplicates-from-sorted-array/",
-    github: "",
-  },
-  "Longest Substring Without Repeating Characters": {
-    youtube: "",
-    platform: "https://leetcode.com/problems/longest-substring-without-repeating-characters/",
     github: "",
   },
   "Max Consecutive Ones III": {
@@ -57,11 +67,6 @@ const basics = {
   "Maximum Points You Can Obtain from Cards": {
     youtube: "",
     platform: "https://leetcode.com/problems/maximum-points-you-can-obtain-from-cards/",
-    github: "",
-  },
-  "Find the Middle Index in Array": {
-    youtube: "",
-    platform: "https://leetcode.com/problems/find-the-middle-index-in-array/",
     github: "",
   }
 };
