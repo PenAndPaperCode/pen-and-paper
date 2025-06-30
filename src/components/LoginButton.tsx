@@ -36,7 +36,7 @@ const LoginButton: React.FC<LoginButtonProps> = ({ onLogin, onLogout }) => {
       if (googleButtonRef.current) {
         googleButtonRef.current.innerHTML = ''; // clear any previous button
         window.google.accounts.id.renderButton(googleButtonRef.current, {
-          theme: 'filled_blue', // ✅ Google blue background
+          theme: 'filled_black', // ✅ Google blue background
           size: 'large',
           type: 'standard',
           shape: 'rectangular',
