@@ -7,6 +7,7 @@ import ErrorBoundary from './components/ErrorBoundary';
 // Lazy load components
 const Sidebar = lazy(() => import('./components/Sidebar'));
 const ContentArea = lazy(() => import('./components/ContentArea'));
+const LoginButton = lazy(() => import('./components/LoginButton'));
 
 // Social media icons as SVG components
 const InstagramIcon: React.FC = () => (
@@ -111,6 +112,22 @@ const App: React.FC = () => {
         </div>
         <div className="text-3xl md:text-4xl font-extrabold select-none text-center mb-4 md:mb-0">
           Crack Interview with PenAndPaper
+        </div>
+        <div className="absolute right-6 top-1/2 transform -translate-y-1/2">
+          <ErrorBoundary fallback={<div className="text-red-500 text-sm">Login unavailable</div>}>
+            <Suspense fallback={<div className="bg-gray-600 animate-pulse rounded-lg px-4 py-2">Loading...</div>}>
+              <LoginButton 
+                onLogin={(user) => {
+                  console.log('User logged in:', user);
+                  // You can add additional login logic here
+                }}
+                onLogout={() => {
+                  console.log('User logged out');
+                  // You can add additional logout logic here
+                }}
+              />
+            </Suspense>
+          </ErrorBoundary>
         </div>
       </nav>
 

@@ -24,13 +24,15 @@ const Sidebar: React.FC<SidebarProps> = memo(({
   const [selectedSubtopic, setLocalSelectedSubtopic] = useState<string | null>(null);
   const sidebarRef = useRef<HTMLDivElement>(null);
 
-  // Prevent overscroll by handling wheel events
+  // Prevent overscroll by handling wheel events on the scrollable content area
+  const scrollableRef = useRef<HTMLDivElement>(null);
+  
   useEffect(() => {
-    const sidebarElement = sidebarRef.current;
-    if (!sidebarElement) return;
+    const scrollableElement = scrollableRef.current;
+    if (!scrollableElement) return;
 
     const handleWheel = (e: WheelEvent) => {
-      const { scrollTop, scrollHeight, clientHeight } = sidebarElement;
+      const { scrollTop, scrollHeight, clientHeight } = scrollableElement;
       const isScrollingUp = e.deltaY < 0;
       const isScrollingDown = e.deltaY > 0;
 
@@ -49,9 +51,9 @@ const Sidebar: React.FC<SidebarProps> = memo(({
       }
     };
 
-    sidebarElement.addEventListener('wheel', handleWheel, { passive: false });
+    scrollableElement.addEventListener('wheel', handleWheel, { passive: false });
     return () => {
-      sidebarElement.removeEventListener('wheel', handleWheel);
+      scrollableElement.removeEventListener('wheel', handleWheel);
     };
   }, []);
 
@@ -134,8 +136,8 @@ const Sidebar: React.FC<SidebarProps> = memo(({
 
   return (
     <div ref={sidebarRef} className="w-1/4 bg-gray-900 p-4 flex flex-col sidebar-container sidebar-locked" style={{ height: 'calc(100vh - 140px)', overscrollBehavior: 'none', position: 'relative' }} role="navigation">
-      {/* Main categories section */}
-      <div className="flex-grow">
+      {/* Main categories section - scrollable */}
+      <div ref={scrollableRef} className="flex-1 overflow-y-auto pr-2" style={{ minHeight: 0 }}>
         <ul className="space-y-2">
           {regularCategories.map((category) => (
             <li key={category} className="mb-4">
@@ -192,8 +194,8 @@ const Sidebar: React.FC<SidebarProps> = memo(({
         </ul>
       </div>
       
-      {/* Footer section with revision sheet */}
-      <div className="mt-auto pt-4 border-t border-gray-700">
+      {/* Footer section with revision sheet - fixed at bottom */}
+      <div className="flex-shrink-0 pt-4 border-t border-gray-700">
         <button
           className={`w-full text-left p-2 rounded-md mb-2 ${
             selectedCategory === "DSA Countdown: Final 15 Days" ? 'bg-blue-700' : 'hover:bg-gray-800'
