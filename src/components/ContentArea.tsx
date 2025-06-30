@@ -32,7 +32,12 @@ const ContentArea: React.FC<ContentAreaProps> = memo(({
 
   // Determine if we should show the data table
   const shouldShowDataTable = () => {
-    if (!selectedCategory || !selectedTopic) return false;
+    if (!selectedCategory) return false;
+    
+    // Special case for Revision Sheet - always show data table
+    if (selectedCategory === 'DSA Countdown: Final 15 Days' || selectedCategory === 'ALL DSA Patterns You must know') return true;
+    
+    if (!selectedTopic) return false;
     
     // For DSA, we need a subtopic
     if (selectedCategory === 'DSA' && !selectedSubtopic) return false;
@@ -42,8 +47,9 @@ const ContentArea: React.FC<ContentAreaProps> = memo(({
   };
 
   return (
-    <div className="flex-1 p-6 overflow-auto" role="main">
-      <Suspense fallback={<div className="text-center p-4">Loading content...</div>}>
+    <div className="flex-1 overflow-y-auto scrollable-content" role="main" style={{ maxHeight: 'calc(100vh - 140px)', overscrollBehavior: 'contain' }}>
+      <div className="p-6">
+        <Suspense fallback={<div className="text-center p-4">Loading content...</div>}>
         {!shouldShowDataTable() && (
           <Welcome 
             category={selectedCategory} 
@@ -52,15 +58,17 @@ const ContentArea: React.FC<ContentAreaProps> = memo(({
           />
         )}
         
-        {shouldShowDataTable() && selectedCategory && selectedTopic && (
+        {shouldShowDataTable() && selectedCategory && (
           <>
             <h1 className="text-2xl font-bold text-white mb-4">
-              {selectedCategory} / {selectedTopic} {selectedSubtopic ? `/ ${selectedSubtopic}` : ''}
+              {selectedCategory === 'DSA Countdown: Final 15 Days' 
+                ? selectedCategory 
+                : `${selectedCategory} / ${selectedTopic} ${selectedSubtopic ? `/ ${selectedSubtopic}` : ''}`}
             </h1>
             <ErrorBoundary fallback={<div className="text-red-500">Error loading data table. Please check the console for details.</div>}>
               <DataTable
                 selectedCategory={selectedCategory}
-                selectedTopic={selectedTopic}
+                selectedTopic={selectedTopic || "problems"}
                 selectedSubtopic={selectedSubtopic || ''}
                 data={data}
                 doneStatus={doneStatus}
@@ -70,6 +78,7 @@ const ContentArea: React.FC<ContentAreaProps> = memo(({
           </>
         )}
       </Suspense>
+      </div>
     </div>
   );
 });

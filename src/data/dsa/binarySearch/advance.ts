@@ -10,22 +10,22 @@ const advance = {
     github: "",
   },
   "Square Root of X": {
-    youtube: "",
+    youtube: "https://youtu.be/KKsuwdwtIok",
     platform: "https://leetcode.com/problems/sqrtx/description/",
     github: "",
   },
   "Koko Eating Bananas": {
-    youtube: "",
+    youtube: "https://youtu.be/W9QKGIsRUX4",
     platform: "https://leetcode.com/problems/koko-eating-bananas/description/",
     github: "",
   },
   "Minimum Number of Days to Make M Bouquets": {
-    youtube: "",
+    youtube: "https://youtu.be/AzqImF_Gj_c",
     platform: "https://leetcode.com/problems/minimum-number-of-days-to-make-m-bouquets/description/",
     github: "",
   },
   "Capacity To Ship Packages Within D Days": {
-    youtube: "",
+    youtube: "https://youtu.be/vqW_tWWe8eM",
     platform: "https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/description/",
     github: "",
   },

@@ -41,14 +41,29 @@ import lldData from './data/lldData';
 import hldData from './data/hldData';
 import machineCodingData from './data/machineCodingData';
 import multithreadingData from './data/multithreadingData';
+import revisionSheetData from './data/revisionSheetData';
+import dsaPatternsData from './data/dsaPatternsData';
+
+// Define the order of categories
+const categoryOrder = [
+  "DSA",
+  "LLD",
+  "HLD",
+  "Machine Coding",
+  "MultiThreading",
+  "DSA Countdown: Final 15 Days",
+  "ALL DSA Patterns You must know"
+];
 
 // Memoize data object
 const data: AppData = {
-  DSA: dsaData,
-  HLD: hldData,
-  LLD: lldData,
+  "DSA": dsaData,
+  "LLD": lldData,
+  "HLD": hldData,
   "Machine Coding": machineCodingData,
-  "MultiThreading": multithreadingData
+  "MultiThreading": multithreadingData,
+  "DSA Countdown: Final 15 Days": revisionSheetData,
+  "ALL DSA Patterns You must know": dsaPatternsData
 };
 
 const App: React.FC = () => {
@@ -69,7 +84,9 @@ const App: React.FC = () => {
       LLD: Object.keys(data.LLD),
       HLD: Object.keys(data.HLD),
       "Machine Coding": Object.keys(data["Machine Coding"]),
-      "MultiThreading": Object.keys(data["MultiThreading"])
+      "MultiThreading": Object.keys(data["MultiThreading"]),
+      "DSA Countdown: Final 15 Days": Object.keys(data["DSA Countdown: Final 15 Days"]),
+      "ALL DSA Patterns You must know": Object.keys(data["ALL DSA Patterns You must know"])
     });
   }, []);
 
@@ -82,8 +99,8 @@ const App: React.FC = () => {
   }, [doneStatus]);
 
   return (
-    <div className="h-screen font-sans bg-black text-white flex flex-col">
-      <nav className="bg-black text-white py-6 px-4 md:px-8 relative">
+    <div className="h-screen font-sans bg-black text-white flex flex-col no-overscroll">
+      <nav className="bg-black text-white py-6 px-4 md:px-8 relative flex-shrink-0">
         <div className="social-icons-container absolute left-6 top-1/2 transform -translate-y-1/2">
           <a href="https://www.instagram.com/penpaper_interviewprep" target="_blank" rel="noopener noreferrer" aria-label="Follow on Instagram">
             <InstagramIcon />
@@ -97,9 +114,9 @@ const App: React.FC = () => {
         </div>
       </nav>
 
-      <hr />
+      <hr className="flex-shrink-0" />
 
-      <div className="flex flex-1 overflow-hidden">
+      <div className="flex flex-1 min-h-0">
         <ErrorBoundary fallback={<div className="p-4 text-red-500">Something went wrong in the sidebar.</div>}>
           <Suspense fallback={
             <div className="w-1/4 h-full flex items-center justify-center">
@@ -108,6 +125,7 @@ const App: React.FC = () => {
           }>
             <Sidebar
               data={memoizedData}
+              categoryOrder={categoryOrder}
               selectedCategory={selectedCategory}
               selectedTopic={selectedTopic}
               setSelectedCategory={setSelectedCategory}

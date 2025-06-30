@@ -14,11 +14,6 @@ const basics = {
     platform: "https://leetcode.com/problems/implement-queue-using-stacks/",
     github: "",
   },
-  "Design Circular Queue": {
-    youtube: "",
-    platform: "https://leetcode.com/problems/design-circular-queue/",
-    github: "",
-  },
   "Number of Recent Calls": {
     youtube: "",
     platform: "https://leetcode.com/problems/number-of-recent-calls/",

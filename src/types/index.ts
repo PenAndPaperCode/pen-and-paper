@@ -50,6 +50,13 @@ export interface MultithreadingData {
   };
 }
 
+// Data structure types for Revision Sheet
+export interface RevisionSheetData {
+  problems: {
+    [problemName: string]: LearningResource;
+  };
+}
+
 // Combined data type for the application
 export interface AppData {
   DSA: DSAData;
@@ -57,6 +64,8 @@ export interface AppData {
   HLD: HLDData;
   "Machine Coding": MachineCodingData;
   "MultiThreading": MultithreadingData;
+  "DSA Countdown: Final 15 Days": RevisionSheetData;
+  "ALL DSA Patterns You must know": RevisionSheetData;
 }
 
 // Type for tracking completion status

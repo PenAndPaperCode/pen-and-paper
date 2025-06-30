@@ -27,14 +27,29 @@ const DataTable: React.FC<DataTableProps> = ({
     // eslint-disable-next-line no-console
     console.log('DataTable rendering with:', { selectedCategory, selectedTopic, selectedSubtopic });
     // eslint-disable-next-line no-console
-    console.log('Data structure:', data[selectedCategory]?.[selectedTopic]);
+    console.log('Data structure:', selectedCategory ? data[selectedCategory] : null);
   }, [selectedCategory, selectedTopic, selectedSubtopic, data]);
 
   // Get all problems for the selected category, topic, and subtopic
   const getProblems = (): ProblemWithName[] => {
     try {
-      // All categories now have a three-level structure
-      if (!data[selectedCategory]?.[selectedTopic]) {
+      if (!selectedCategory) return [];
+      
+      // Special handling for Revision Sheet which has a different structure
+      if (selectedCategory === "DSA Countdown: Final 15 Days" || selectedCategory === "ALL DSA Patterns You must know") {
+        const revisionData = data[selectedCategory];
+        const problemsData = revisionData.problems;
+        if (!problemsData) return [];
+        
+        return Object.keys(problemsData).map(problemKey => ({
+          name: problemKey,
+          ...(problemsData[problemKey] as LearningResource)
+        }));
+      }
+      
+      // All other categories have a three-level structure
+      const categoryData = data[selectedCategory];
+      if (!categoryData || !selectedTopic || !(selectedTopic in categoryData)) {
         // eslint-disable-next-line no-console
         console.error(`Topic "${selectedTopic}" not found in ${selectedCategory} data`);
         return [];
@@ -42,27 +57,30 @@ const DataTable: React.FC<DataTableProps> = ({
       
       // If subtopic is provided, use it
       if (selectedSubtopic) {
-        const subtopicData = data[selectedCategory][selectedTopic][selectedSubtopic];
-        if (!subtopicData) {
+        const topicData = categoryData[selectedTopic as keyof typeof categoryData];
+        if (!topicData || !(selectedSubtopic in topicData)) {
           // eslint-disable-next-line no-console
           console.error(`Subtopic "${selectedSubtopic}" not found in "${selectedTopic}"`);
           return [];
         }
         
+        const subtopicData = topicData[selectedSubtopic as keyof typeof topicData];
+        
         // Get all problems from the subtopic
         return Object.keys(subtopicData).map(problemKey => ({
           name: problemKey,
-          ...(subtopicData[problemKey] as LearningResource)
+          ...(subtopicData[problemKey] as unknown as LearningResource)
         }));
       } else {
         // If no subtopic, get the first problem from the first subtopic
-        const firstSubtopic = Object.keys(data[selectedCategory][selectedTopic])[0];
+        const topicData = categoryData[selectedTopic as keyof typeof categoryData];
+        const firstSubtopic = Object.keys(topicData)[0];
         if (!firstSubtopic) return [];
         
-        const subtopicData = data[selectedCategory][selectedTopic][firstSubtopic];
+        const subtopicData = topicData[firstSubtopic as keyof typeof topicData];
         return Object.keys(subtopicData).map(problemKey => ({
           name: `${firstSubtopic}: ${problemKey}`,
-          ...(subtopicData[problemKey] as LearningResource)
+          ...(subtopicData[problemKey] as unknown as LearningResource)
         }));
       }
     } catch (error) {
@@ -90,7 +108,7 @@ const DataTable: React.FC<DataTableProps> = ({
   }
 
   return (
-    <div className="overflow-x-auto">
+    <div className="table-container">
       <table className="mt-4 w-full border border-gray-600 rounded-lg shadow-sm text-white" aria-label={`Problems for ${selectedSubtopic || selectedTopic}`}>
         <thead className="bg-gray-800">
           <tr>
