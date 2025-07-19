@@ -30,12 +30,12 @@ const advance = {
     github: "",
   },
   "Allocate Minimum Number of Pages": {
-    youtube: "",
+    youtube: "https://youtu.be/oaEb-oDfqzc",
     platform: "https://www.geeksforgeeks.org/problems/allocate-minimum-number-of-pages0937/1",
     github: "",
   },
   "Split Array Largest Sum": {
-    youtube: "",
+    youtube: "https://youtu.be/P202CoV_VV0",
     platform: "https://leetcode.com/problems/split-array-largest-sum/description/",
     github: "",
   },
@@ -45,12 +45,12 @@ const advance = {
     github: "",
   },
   "Search a 2D Matrix": {
-    youtube: "",
+    youtube: "https://youtu.be/Q0Cx15RuLZM",
     platform: "https://leetcode.com/problems/search-a-2d-matrix/description/",
     github: "",
   },
   "Search a 2D Matrix II": {
-    youtube: "",
+    youtube: "https://youtu.be/2yTGE1KFh4Y",
     platform: "https://leetcode.com/problems/search-a-2d-matrix-ii/description/",
     github: "",
   },

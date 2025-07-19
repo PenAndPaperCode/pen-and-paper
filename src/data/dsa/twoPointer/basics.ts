@@ -1,16 +1,16 @@
 const basics = {
   "Introduction to Two Pointer Technique": {
-    youtube: "",
+    youtube: "https://youtu.be/UdxyKnwKqLc",
     platform: "",
     github: "",
   },
   "All About Two Pointer": {
-    youtube: "",
+    youtube: "https://youtu.be/II0jWP668uY",
     platform: "",
     github: "",
   },
   "Two Pointer Patterns (4 Patterns)": {
-    youtube: "",
+    youtube: "https://youtu.be/iRuvsBPCZtU",
     platform: "",
     github: "",
   },

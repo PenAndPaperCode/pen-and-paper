@@ -36,6 +36,7 @@ const dsaData: DSAData = {
   "Graph": graphData,
   "Recursion": recursionData,
   "Binary Search": binarySearchData,
+  "Two Pointer": twoPointerData,
   "Array": arrayData,
   "Binary Search Tree": binarySearchTreeData,
   "Binary Tree": binaryTreeData,
@@ -51,7 +52,6 @@ const dsaData: DSAData = {
   "Stack": stackData,
   "String": stringData,
   "Trie": trieData,
-  "Two Pointer": twoPointerData
 };
 
 export default dsaData;
