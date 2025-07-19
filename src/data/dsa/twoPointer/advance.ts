@@ -14,6 +14,11 @@ const advance = {
     platform: "https://leetcode.com/problems/palindromic-substrings/",
     github: "",
   },
+  "Binary Subarrays With Sum": {
+    youtube: "",
+    platform: "https://leetcode.com/problems/binary-subarrays-with-sum/description/",
+    github: "",
+  },
   "Longest Substring with At Most K Distinct Characters": {
     youtube: "",
     platform: "https://www.geeksforgeeks.org/find-the-longest-substring-with-k-unique-characters-in-a-given-string/",
@@ -62,6 +67,11 @@ const advance = {
   "Longest Palindromic Substring": {
     youtube: "",
     platform: "https://leetcode.com/problems/longest-palindromic-substring/",
+    github: "",
+  },
+  "Find Median from Data Stream": {
+    youtube: "",
+    platform: "https://leetcode.com/problems/find-median-from-data-stream/description/",
     github: "",
   }
 };

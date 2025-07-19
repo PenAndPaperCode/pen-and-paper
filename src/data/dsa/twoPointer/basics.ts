@@ -14,14 +14,14 @@ const basics = {
     platform: "",
     github: "",
   },
-  "Pattern 1 (Opposite Direction) - Two Sum II": {
-    youtube: "",
-    platform: "https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/",
+  "Pattern 1 (Both from 0 → n) - Longest Substring Without Repeating Characters": {
+    youtube: "https://youtu.be/w4OlxEiKMcQ",
+    platform: "https://leetcode.com/problems/longest-substring-without-repeating-characters/description/",
     github: "",
   },
-  "Pattern 2 (Sliding Window) - Longest Substring Without Repeating Characters": {
-    youtube: "",
-    platform: "https://leetcode.com/problems/longest-substring-without-repeating-characters/",
+  "Pattern 2 (One‑start & One‑end Pointers) - Two Sum II - Input Array Is Sorted": {
+    youtube: "https://youtu.be/EG0aHr2CRxc",
+    platform: "https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/description/",
     github: "",
   },
   "Pattern 3 (Expanding) - Longest Palindromic Substring": {
@@ -29,9 +29,14 @@ const basics = {
     platform: "https://leetcode.com/problems/longest-palindromic-substring/",
     github: "",
   },
-  "Pattern 4 (Slow Fast Pointer) - Find the Middle Index in Array": {
+  "Pattern 4 (Slow Fast Pointer) - Middle of the Linked List": {
     youtube: "",
-    platform: "https://leetcode.com/problems/find-the-middle-index-in-array/",
+    platform: "https://leetcode.com/problems/middle-of-the-linked-list/description/",
+    github: "",
+  },
+  "Is Subsequence": {
+    youtube: "",
+    platform: "https://leetcode.com/problems/is-subsequence/description/",
     github: "",
   },
   "Valid Palindrome": {
@@ -67,6 +72,21 @@ const basics = {
   "Maximum Points You Can Obtain from Cards": {
     youtube: "",
     platform: "https://leetcode.com/problems/maximum-points-you-can-obtain-from-cards/",
+    github: "",
+  },
+  "Maximum Erasure Value": {
+    youtube: "",
+    platform: "https://leetcode.com/problems/maximum-erasure-value/description/",
+    github: "",
+  },
+  "Count Number of Nice Subarrays": {
+    youtube: "",
+    platform: "https://leetcode.com/problems/count-number-of-nice-subarrays/description/",
+    github: "",
+  },
+  "Minimum Operations to Make Median of Array Equal to K": {
+    youtube: "",
+    platform: "https://leetcode.com/problems/minimum-operations-to-make-median-of-array-equal-to-k/description/",
     github: "",
   }
 };
