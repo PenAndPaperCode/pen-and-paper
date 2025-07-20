@@ -44,11 +44,6 @@ const basics = {
     platform: "https://leetcode.com/problems/valid-palindrome/",
     github: "",
   },
-  "Remove Duplicates from Sorted Array": {
-    youtube: "",
-    platform: "https://leetcode.com/problems/remove-duplicates-from-sorted-array/",
-    github: "",
-  },
   "Max Consecutive Ones III": {
     youtube: "",
     platform: "https://leetcode.com/problems/max-consecutive-ones-iii/",
@@ -56,7 +51,7 @@ const basics = {
   },
   "Fruit Into Basket": {
     youtube: "",
-    platform: "https://leetcode.com/problems/fruit-into-basket/",
+    platform: "https://leetcode.com/problems/fruit-into-baskets/description/",
     github: "",
   },
   "Longest Repeating Character Replacement": {
