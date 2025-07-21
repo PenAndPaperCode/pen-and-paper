@@ -1,6 +1,6 @@
 const basics = {
   "Introduction to Two Pointer Technique": {
-    youtube: "https://youtu.be/UdxyKnwKqLc",
+    youtube: "https://youtu.be/iRuvsBPCZtU",
     platform: "",
     github: "",
   },
@@ -10,7 +10,7 @@ const basics = {
     github: "",
   },
   "Two Pointer Patterns (4 Patterns)": {
-    youtube: "https://youtu.be/iRuvsBPCZtU",
+    youtube: "https://youtu.be/UdxyKnwKqLc",
     platform: "",
     github: "",
   },
@@ -25,27 +25,27 @@ const basics = {
     github: "",
   },
   "Pattern 3 (Expanding) - Longest Palindromic Substring": {
-    youtube: "",
+    youtube: "https://youtu.be/P20EGF2VOL8",
     platform: "https://leetcode.com/problems/longest-palindromic-substring/",
     github: "",
   },
   "Pattern 4 (Slow Fast Pointer) - Middle of the Linked List": {
-    youtube: "",
+    youtube: "https://youtu.be/Dqn-nukuJ70",
     platform: "https://leetcode.com/problems/middle-of-the-linked-list/description/",
     github: "",
   },
   "Is Subsequence": {
-    youtube: "",
+    youtube: "https://youtu.be/jum3Po01wH8",
     platform: "https://leetcode.com/problems/is-subsequence/description/",
     github: "",
   },
   "Valid Palindrome": {
-    youtube: "",
+    youtube: "https://youtu.be/uoW1br0qQAs",
     platform: "https://leetcode.com/problems/valid-palindrome/",
     github: "",
   },
   "Max Consecutive Ones III": {
-    youtube: "",
+    youtube: "https://youtu.be/bqb5OVgxDjs",
     platform: "https://leetcode.com/problems/max-consecutive-ones-iii/",
     github: "",
   },
