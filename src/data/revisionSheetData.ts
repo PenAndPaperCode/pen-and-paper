@@ -6,7 +6,7 @@ const revisionSheetData = {
       github: ""
     },
     "Aggressive Cows": {
-      youtube: "",
+      youtube: "https://youtu.be/ZYTs48FfD3Q",
       platform: "https://www.geeksforgeeks.org/problems/aggressive-cows/0",
       github: ""
     },
@@ -16,7 +16,7 @@ const revisionSheetData = {
       github: ""
     },
     "Single Element in a Sorted Array": {
-      youtube: "",
+      youtube: "https://youtu.be/ckDM49-OwYA",
       platform: "https://leetcode.com/problems/single-element-in-a-sorted-array/",
       github: ""
     },
@@ -101,7 +101,7 @@ const revisionSheetData = {
       github: ""
     },
     "Rotting Oranges": {
-      youtube: "",
+      youtube: "https://youtu.be/yvvA6DGNaDs",
       platform: "https://leetcode.com/problems/rotting-oranges/",
       github: ""
     },
@@ -121,7 +121,7 @@ const revisionSheetData = {
       github: ""
     },
     "Palindrome Partitioning": {
-      youtube: "",
+      youtube: "https://youtu.be/jNbIrwBwd4U",
       platform: "https://leetcode.com/problems/palindrome-partitioning/",
       github: ""
     },
@@ -191,7 +191,7 @@ const revisionSheetData = {
       github: ""
     },
     "Capacity To Ship Packages Within D Days": {
-      youtube: "",
+      youtube: "https://youtu.be/vqW_tWWe8eM",
       platform: "https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/",
       github: ""
     },
@@ -231,7 +231,7 @@ const revisionSheetData = {
       github: ""
     },
     "Max Consecutive Ones III": {
-      youtube: "",
+      youtube: "https://youtu.be/bqb5OVgxDjs",
       platform: "https://leetcode.com/problems/max-consecutive-ones-iii/",
       github: ""
     },
@@ -311,12 +311,12 @@ const revisionSheetData = {
       github: ""
     },
     "N-Queens": {
-      youtube: "",
+      youtube: "https://youtu.be/eZZ_VElAzwU",
       platform: "https://leetcode.com/problems/n-queens/",
       github: ""
     },
     "Search in Rotated Sorted Array": {
-      youtube: "",
+      youtube: "https://youtu.be/R3RbLrKFc00",
       platform: "https://leetcode.com/problems/search-in-rotated-sorted-array/",
       github: ""
     },
@@ -336,7 +336,7 @@ const revisionSheetData = {
       github: ""
     },
     "Combination Sum": {
-      youtube: "",
+      youtube: "https://youtu.be/iDO0Ddir5dc",
       platform: "https://leetcode.com/problems/combination-sum/",
       github: ""
     },

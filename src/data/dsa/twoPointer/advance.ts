@@ -21,7 +21,17 @@ const advance = {
   },
   "Longest Substring with At Most K Distinct Characters": {
     youtube: "",
-    platform: "https://www.geeksforgeeks.org/find-the-longest-substring-with-k-unique-characters-in-a-given-string/",
+    platform: "https://www.naukri.com/code360/problems/distinct-characters_2221410",
+    github: "",
+  },
+  "Longest Substring with K Uniques": {
+    youtube: "",
+    platform: "https://www.geeksforgeeks.org/problems/longest-k-unique-characters-substring0853/1",
+    github: "",
+  },
+  "Count Number of Nice Subarrays": {
+    youtube: "",
+    platform: "https://leetcode.com/problems/count-number-of-nice-subarrays/description/",
     github: "",
   },
   "Subarrays with K Different Integers": {
@@ -62,11 +72,6 @@ const advance = {
   "Sort Colors (Dutch National Flag Algorithm)": {
     youtube: "",
     platform: "https://leetcode.com/problems/sort-colors/",
-    github: "",
-  },
-  "Longest Palindromic Substring": {
-    youtube: "",
-    platform: "https://leetcode.com/problems/longest-palindromic-substring/",
     github: "",
   },
   "Find Median from Data Stream": {

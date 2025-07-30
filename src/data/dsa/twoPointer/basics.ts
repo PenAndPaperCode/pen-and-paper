@@ -34,13 +34,18 @@ const basics = {
     platform: "https://leetcode.com/problems/middle-of-the-linked-list/description/",
     github: "",
   },
+  "Two Pointer All Pattern Template Code": {
+    youtube: "",
+    platform: "",
+    github: "",
+  },
   "Is Subsequence": {
     youtube: "https://youtu.be/jum3Po01wH8",
     platform: "https://leetcode.com/problems/is-subsequence/description/",
     github: "",
   },
   "Valid Palindrome": {
-    youtube: "https://youtu.be/uoW1br0qQAs",
+    youtube: "https://youtu.be/rOk0J_ggxOo",
     platform: "https://leetcode.com/problems/valid-palindrome/",
     github: "",
   },
@@ -49,14 +54,14 @@ const basics = {
     platform: "https://leetcode.com/problems/max-consecutive-ones-iii/",
     github: "",
   },
-  "Fruit Into Basket": {
-    youtube: "",
-    platform: "https://leetcode.com/problems/fruit-into-baskets/description/",
+  "Longest Repeating Character Replacement": {
+    youtube: "https://youtu.be/V3rNmXnGfWg",
+    platform: "https://leetcode.com/problems/longest-repeating-character-replacement/",
     github: "",
   },
-  "Longest Repeating Character Replacement": {
-    youtube: "",
-    platform: "https://leetcode.com/problems/longest-repeating-character-replacement/",
+  "Fruit Into Basket": {
+    youtube: "https://youtu.be/O7sWexVX2E0",
+    platform: "https://leetcode.com/problems/fruit-into-baskets/description/",
     github: "",
   },
   "Number of Substrings Containing All Three Characters": {
@@ -72,16 +77,6 @@ const basics = {
   "Maximum Erasure Value": {
     youtube: "",
     platform: "https://leetcode.com/problems/maximum-erasure-value/description/",
-    github: "",
-  },
-  "Count Number of Nice Subarrays": {
-    youtube: "",
-    platform: "https://leetcode.com/problems/count-number-of-nice-subarrays/description/",
-    github: "",
-  },
-  "Minimum Operations to Make Median of Array Equal to K": {
-    youtube: "",
-    platform: "https://leetcode.com/problems/minimum-operations-to-make-median-of-array-equal-to-k/description/",
     github: "",
   }
 };
