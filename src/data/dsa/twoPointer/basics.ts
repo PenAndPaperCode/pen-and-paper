@@ -65,17 +65,17 @@ const basics = {
     github: "",
   },
   "Number of Substrings Containing All Three Characters": {
-    youtube: "",
+    youtube: "https://youtu.be/S49ArATrj0Y",
     platform: "https://leetcode.com/problems/number-of-substrings-containing-all-three-characters/",
     github: "",
   },
   "Maximum Points You Can Obtain from Cards": {
-    youtube: "",
+    youtube: "https://youtu.be/gWi14nbkr0M",
     platform: "https://leetcode.com/problems/maximum-points-you-can-obtain-from-cards/",
     github: "",
   },
   "Maximum Erasure Value": {
-    youtube: "",
+    youtube: "https://youtu.be/qHpr82LOGzs",
     platform: "https://leetcode.com/problems/maximum-erasure-value/description/",
     github: "",
   }

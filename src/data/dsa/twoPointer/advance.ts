@@ -1,34 +1,34 @@
 const advance = {
   "Container With Most Water": {
-    youtube: "",
+    youtube: "https://youtu.be/hW64I2V2UbE",
     platform: "https://leetcode.com/problems/container-with-most-water/",
     github: "",
   },
   "Minimum Size Subarray Sum": {
-    youtube: "",
+    youtube: "https://youtu.be/It4ayaBShlk",
     platform: "https://leetcode.com/problems/minimum-size-subarray-sum/",
     github: "",
   },
   "Palindromic Substrings": {
-    youtube: "",
+    youtube: "https://youtu.be/kn02Fw74kSY",
     platform: "https://leetcode.com/problems/palindromic-substrings/",
     github: "",
   },
-  "Binary Subarrays With Sum": {
-    youtube: "",
-    platform: "https://leetcode.com/problems/binary-subarrays-with-sum/description/",
-    github: "",
-  },
   "Longest Substring with At Most K Distinct Characters": {
-    youtube: "",
+    youtube: "https://youtu.be/EQjYQyptUAY",
     platform: "https://www.naukri.com/code360/problems/distinct-characters_2221410",
     github: "",
   },
   "Longest Substring with K Uniques": {
-    youtube: "",
+    youtube: "https://youtu.be/gCPx2-uwrc0",
     platform: "https://www.geeksforgeeks.org/problems/longest-k-unique-characters-substring0853/1",
     github: "",
   },
+"Binary Subarrays With Sum": {
+  youtube: "",
+  platform: "https://leetcode.com/problems/binary-subarrays-with-sum/description/",
+  github: "",
+},
   "Count Number of Nice Subarrays": {
     youtube: "",
     platform: "https://leetcode.com/problems/count-number-of-nice-subarrays/description/",
@@ -42,11 +42,6 @@ const advance = {
   "Minimum Window Substring": {
     youtube: "",
     platform: "https://leetcode.com/problems/minimum-window-substring/",
-    github: "",
-  },
-  "Minimum Window Subsequence": {
-    youtube: "",
-    platform: "https://www.geeksforgeeks.org/find-minimum-window-subsequence/",
     github: "",
   },
   "Three Sum": {
