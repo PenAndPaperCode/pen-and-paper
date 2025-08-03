@@ -449,6 +449,11 @@ const revisionSheetData = {
        youtube: "",
        platform: "https://leetcode.com/problems/cracking-the-safe/description/",
        github: ""
+     },
+     "Kth Smallest Product of Two Sorted Arrays": {
+       youtube: "",
+       platform: "https://leetcode.com/problems/kth-smallest-product-of-two-sorted-arrays/description/",
+       github: ""
      }
   }
 };

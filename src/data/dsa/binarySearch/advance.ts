@@ -64,6 +64,11 @@ const advance = {
     platform: "https://leetcode.com/problems/time-based-key-value-store/description/",
     github: "",
   },
+  "Binary Search Conclusion": {
+    youtube: "https://youtu.be/6C-TURZKyrg",
+    platform: "",
+    github: "",
+  },
 };
 
 export default advance;

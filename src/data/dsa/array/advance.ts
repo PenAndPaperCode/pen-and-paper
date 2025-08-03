@@ -4,6 +4,11 @@ const advance = {
     platform: "https://leetcode.com/problems/next-permutation/",
     github: "",
   },
+  "Sort Colors (Dutch National Flag Algorithm)": {
+    youtube: "",
+    platform: "https://leetcode.com/problems/sort-colors/",
+    github: "",
+  },
   "Spiral Matrix": {
     youtube: "",
     platform: "https://leetcode.com/problems/spiral-matrix/",

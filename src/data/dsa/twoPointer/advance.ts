@@ -25,53 +25,43 @@ const advance = {
     github: "",
   },
 "Binary Subarrays With Sum": {
-  youtube: "",
+  youtube: "https://youtu.be/HCCO82HjI-o",
   platform: "https://leetcode.com/problems/binary-subarrays-with-sum/description/",
   github: "",
 },
   "Count Number of Nice Subarrays": {
-    youtube: "",
+    youtube: "https://youtu.be/44MB7fND_0c",
     platform: "https://leetcode.com/problems/count-number-of-nice-subarrays/description/",
     github: "",
   },
   "Subarrays with K Different Integers": {
-    youtube: "",
+    youtube: "https://youtu.be/Ok_a1W8Ufok",
     platform: "https://leetcode.com/problems/subarrays-with-k-different-integers/",
     github: "",
   },
   "Minimum Window Substring": {
-    youtube: "",
+    youtube: "https://youtu.be/6eiFiYqXlGM",
     platform: "https://leetcode.com/problems/minimum-window-substring/",
     github: "",
   },
   "Three Sum": {
-    youtube: "",
+    youtube: "https://youtu.be/sjk_2qRt6No",
     platform: "https://leetcode.com/problems/3sum/",
     github: "",
   },
   "Four Sum": {
-    youtube: "",
+    youtube: "https://youtu.be/mNFrGKStVBc",
     platform: "https://leetcode.com/problems/4sum/",
     github: "",
   },
   "Trapping Rain Water": {
-    youtube: "",
+    youtube: "https://youtu.be/pVHtGIlea3I",
     platform: "https://leetcode.com/problems/trapping-rain-water/",
     github: "",
   },
-  "Sliding Window Maximum": {
-    youtube: "",
-    platform: "https://leetcode.com/problems/sliding-window-maximum/",
-    github: "",
-  },
-  "Sort Colors (Dutch National Flag Algorithm)": {
-    youtube: "",
-    platform: "https://leetcode.com/problems/sort-colors/",
-    github: "",
-  },
-  "Find Median from Data Stream": {
-    youtube: "",
-    platform: "https://leetcode.com/problems/find-median-from-data-stream/description/",
+  "Two Pointer Concluded": {
+    youtube: "https://youtu.be/AoF9BlviReI",
+    platform: "",
     github: "",
   }
 };

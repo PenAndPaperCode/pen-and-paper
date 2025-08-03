@@ -35,7 +35,7 @@ const basics = {
     github: "",
   },
   "Two Pointer All Pattern Template Code": {
-    youtube: "",
+    youtube: "https://youtu.be/w0G1H09oGZQ",
     platform: "",
     github: "",
   },

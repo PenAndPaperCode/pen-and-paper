@@ -157,8 +157,7 @@ const DataTable: React.FC<DataTableProps> = ({
                       rel="noreferrer"
                       aria-label={`Platform link for ${problem.name}`}
                     >
-                      {problem.platform.includes('geeksforgeeks') || problem.platform.includes('leetcode') ? 'Practice' :
-                       'Problem Link'}
+                      {'Practice'}
                     </a>
                   ) : (
                     problem.platform

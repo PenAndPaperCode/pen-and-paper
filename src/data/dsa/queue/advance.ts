@@ -1,4 +1,9 @@
 const advance = {
+  "Sliding Window Maximum": {
+    youtube: "",
+    platform: "https://leetcode.com/problems/sliding-window-maximum/",
+    github: "",
+  },
   "Design Circular Deque": {
     youtube: "",
     platform: "https://leetcode.com/problems/design-circular-deque/",
