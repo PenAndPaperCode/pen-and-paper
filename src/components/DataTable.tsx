@@ -1,11 +1,11 @@
 import React, { memo, useCallback, useEffect } from 'react';
-import { AppData, DoneStatusType, LearningResource } from '../types';
+import { DoneStatusType, LearningResource } from '../types';
 
 interface DataTableProps {
-  selectedCategory: keyof AppData;
+  selectedCategory: string;
   selectedTopic: string;
   selectedSubtopic: string;
-  data: AppData;
+  data: any;
   doneStatus: DoneStatusType;
   setDoneStatus: React.Dispatch<React.SetStateAction<DoneStatusType>>;
 }
@@ -28,6 +28,8 @@ const DataTable: React.FC<DataTableProps> = ({
     console.log('DataTable rendering with:', { selectedCategory, selectedTopic, selectedSubtopic });
     // eslint-disable-next-line no-console
     console.log('Data structure:', selectedCategory ? data[selectedCategory] : null);
+    // eslint-disable-next-line no-console
+    console.log('Available topics in data:', selectedCategory && data[selectedCategory] ? Object.keys(data[selectedCategory]) : 'none');
   }, [selectedCategory, selectedTopic, selectedSubtopic, data]);
 
   // Get all problems for the selected category, topic, and subtopic
@@ -38,8 +40,14 @@ const DataTable: React.FC<DataTableProps> = ({
       // Special handling for Revision Sheet which has a different structure
       if (selectedCategory === "DSA Countdown: Final 15 Days" || selectedCategory === "ALL DSA Patterns You must know") {
         const revisionData = data[selectedCategory];
-        const problemsData = revisionData.problems;
-        if (!problemsData) return [];
+        if (!revisionData || !selectedTopic) return [];
+        
+        // Use the selectedTopic as the key (e.g., "Must Do DSA Problems" or "Must Know DSA Patterns")
+        const problemsData = revisionData[selectedTopic];
+        if (!problemsData) {
+          console.error(`Topic "${selectedTopic}" not found in ${selectedCategory} data`);
+          return [];
+        }
         
         return Object.keys(problemsData).map(problemKey => ({
           name: problemKey,

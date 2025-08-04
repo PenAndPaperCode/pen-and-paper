@@ -1,7 +1,7 @@
 import React, { useState, Suspense, lazy, useMemo, useEffect } from 'react';
 import './index.css';
 import './components/SocialIcons.css';
-import { AppData, DoneStatusType } from './types';
+import { DoneStatusType } from './types';
 import ErrorBoundary from './components/ErrorBoundary';
 
 // Lazy load components
@@ -45,30 +45,38 @@ import multithreadingData from './data/multithreadingData';
 import revisionSheetData from './data/revisionSheetData';
 import dsaPatternsData from './data/dsaPatternsData';
 
-// Define the order of categories
-const categoryOrder = [
+// Define navigation sections
+type NavSection = 'core-topics' | 'final-countdown' | 'dsa-patterns';
+
+// Define the order of categories for each section
+const coreTopicsOrder = [
   "DSA",
-  "LLD",
+  "LLD", 
   "HLD",
   "Machine Coding",
-  "MultiThreading",
-  "DSA Countdown: Final 15 Days",
-  "ALL DSA Patterns You must know"
+  "MultiThreading"
 ];
 
 // Memoize data object
-const data: AppData = {
+const coreTopicsData = {
   "DSA": dsaData,
   "LLD": lldData,
   "HLD": hldData,
   "Machine Coding": machineCodingData,
-  "MultiThreading": multithreadingData,
-  "DSA Countdown: Final 15 Days": revisionSheetData,
+  "MultiThreading": multithreadingData
+};
+
+const finalCountdownData = {
+  "DSA Countdown: Final 15 Days": revisionSheetData
+};
+
+const dsaPatternsData_obj = {
   "ALL DSA Patterns You must know": dsaPatternsData
 };
 
 const App: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState<keyof AppData | null>(null);
+  const [activeNavSection, setActiveNavSection] = useState<NavSection>('core-topics');
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [selectedTopic, setSelectedTopic] = useState<string | null>(null);
   const [selectedSubtopic, setSelectedSubtopic] = useState<string | null>(null);
   const [doneStatus, setDoneStatus] = useState<DoneStatusType>(() => {
@@ -77,22 +85,67 @@ const App: React.FC = () => {
     return savedStatus ? JSON.parse(savedStatus) : {};
   });
 
+  // Get current data based on active nav section
+  const getCurrentData = () => {
+    switch (activeNavSection) {
+      case 'core-topics':
+        return coreTopicsData;
+      case 'final-countdown':
+        return finalCountdownData;
+      case 'dsa-patterns':
+        return dsaPatternsData_obj;
+      default:
+        return coreTopicsData;
+    }
+  };
+
+  // Get current category order based on active nav section
+  const getCurrentCategoryOrder = () => {
+    switch (activeNavSection) {
+      case 'core-topics':
+        return coreTopicsOrder;
+      case 'final-countdown':
+        return ["DSA Countdown: Final 15 Days"];
+      case 'dsa-patterns':
+        return ["ALL DSA Patterns You must know"];
+      default:
+        return coreTopicsOrder;
+    }
+  };
+
+  // Reset selections when switching nav sections
+  const handleNavSectionChange = (section: NavSection) => {
+    setActiveNavSection(section);
+    
+    // Automatically select the appropriate category and topic for each section
+    if (section === 'final-countdown') {
+      setSelectedCategory("DSA Countdown: Final 15 Days");
+      setSelectedTopic("Must Do DSA Problems");
+      setSelectedSubtopic(null);
+    } else if (section === 'dsa-patterns') {
+      setSelectedCategory("ALL DSA Patterns You must know");
+      setSelectedTopic("Must Know DSA Patterns");
+      setSelectedSubtopic(null);
+    } else {
+      // For core-topics, reset everything
+      setSelectedCategory(null);
+      setSelectedTopic(null);
+      setSelectedSubtopic(null);
+    }
+  };
+
   // Debug logging
   useEffect(() => {
+    const currentData = getCurrentData();
     // eslint-disable-next-line no-console
-    console.log('App data structure:', {
-      DSA: Object.keys(data.DSA),
-      LLD: Object.keys(data.LLD),
-      HLD: Object.keys(data.HLD),
-      "Machine Coding": Object.keys(data["Machine Coding"]),
-      "MultiThreading": Object.keys(data["MultiThreading"]),
-      "DSA Countdown: Final 15 Days": Object.keys(data["DSA Countdown: Final 15 Days"]),
-      "ALL DSA Patterns You must know": Object.keys(data["ALL DSA Patterns You must know"])
+    console.log('Current section data structure:', {
+      section: activeNavSection,
+      categories: Object.keys(currentData)
     });
-  }, []);
+  }, [activeNavSection]);
 
-  // Memoize data to prevent unnecessary re-renders
-  const memoizedData = useMemo(() => data, []);
+  // Memoize current data to prevent unnecessary re-renders
+  const memoizedData = useMemo(() => getCurrentData(), [activeNavSection]);
 
   // Save doneStatus to localStorage whenever it changes
   useEffect(() => {
@@ -101,33 +154,73 @@ const App: React.FC = () => {
 
   return (
     <div className="h-screen font-sans bg-black text-white flex flex-col no-overscroll">
-      <nav className="bg-black text-white py-6 px-4 md:px-8 relative flex-shrink-0">
-        <div className="social-icons-container absolute left-6 top-1/2 transform -translate-y-1/2">
-          <a href="https://www.instagram.com/penpaper_interviewprep" target="_blank" rel="noopener noreferrer" aria-label="Follow on Instagram">
-            <InstagramIcon />
-          </a>
-          <a href="https://youtube.com/@sikhoaursmjho?sub_confirmation=1" target="_blank" rel="noopener noreferrer" aria-label="Subscribe on YouTube">
-            <YouTubeIcon />
-          </a>
-        </div>
-        <div className="text-3xl md:text-4xl font-extrabold select-none text-center mb-4 md:mb-0">
-          Crack Interview with PenAndPaper
-        </div>
-        <div className="absolute right-6 top-1/2 transform -translate-y-1/2">
-          <ErrorBoundary fallback={<div className="text-red-500 text-sm">Login unavailable</div>}>
-            <Suspense fallback={<div className="bg-gray-600 animate-pulse rounded-lg px-4 py-2">Loading...</div>}>
-              <LoginButton 
-                onLogin={(user) => {
-                  console.log('User logged in:', user);
-                  // You can add additional login logic here
-                }}
-                onLogout={() => {
-                  console.log('User logged out');
-                  // You can add additional logout logic here
-                }}
-              />
-            </Suspense>
-          </ErrorBoundary>
+      <nav className="bg-black text-white py-3 px-2 md:py-6 md:px-8 relative flex-shrink-0">
+        {/* Equally Spaced Layout - Items distributed across full width */}
+        <div className="flex flex-wrap items-center justify-between w-full gap-2 sm:gap-3 md:gap-4">
+          
+          {/* Left: Social Icons */}
+          <div className="social-icons-container flex space-x-2 flex-shrink-0 order-1">
+            <a href="https://www.instagram.com/penpaper_interviewprep" target="_blank" rel="noopener noreferrer" aria-label="Follow on Instagram">
+              <InstagramIcon />
+            </a>
+            <a href="https://youtube.com/@sikhoaursmjho?sub_confirmation=1" target="_blank" rel="noopener noreferrer" aria-label="Subscribe on YouTube">
+              <YouTubeIcon />
+            </a>
+          </div>
+          
+          {/* Center: Navigation Buttons */}
+          <div className="flex items-center gap-1 sm:gap-2 md:gap-3 flex-shrink-0 order-2">
+            <button
+              onClick={() => handleNavSectionChange('core-topics')}
+              className={`px-2 py-1.5 sm:px-3 sm:py-2 md:px-4 rounded-md sm:rounded-lg font-semibold text-xs sm:text-sm md:text-base transition-all duration-200 whitespace-nowrap ${
+                activeNavSection === 'core-topics'
+                  ? 'bg-blue-600 text-white shadow-lg'
+                  : 'bg-gray-700 text-gray-300 hover:bg-gray-600'
+              }`}
+            >
+              <span className="hidden xs:inline">Core Topics</span>
+              <span className="xs:hidden">Core</span>
+            </button>
+            <button
+              onClick={() => handleNavSectionChange('final-countdown')}
+              className={`px-2 py-1.5 sm:px-3 sm:py-2 md:px-4 rounded-md sm:rounded-lg font-semibold text-xs sm:text-sm md:text-base transition-all duration-200 whitespace-nowrap ${
+                activeNavSection === 'final-countdown'
+                  ? 'bg-yellow-600 text-white shadow-lg'
+                  : 'bg-gray-700 text-gray-300 hover:bg-gray-600'
+              }`}
+            >
+              <span className="hidden xs:inline">Final 15 Days</span>
+              <span className="xs:hidden">Final 15</span>
+            </button>
+            <button
+              onClick={() => handleNavSectionChange('dsa-patterns')}
+              className={`px-2 py-1.5 sm:px-3 sm:py-2 md:px-4 rounded-md sm:rounded-lg font-semibold text-xs sm:text-sm md:text-base transition-all duration-200 whitespace-nowrap ${
+                activeNavSection === 'dsa-patterns'
+                  ? 'bg-emerald-600 text-white shadow-lg'
+                  : 'bg-gray-700 text-gray-300 hover:bg-gray-600'
+              }`}
+            >
+              <span className="hidden xs:inline">DSA Patterns</span>
+              <span className="xs:hidden">Patterns</span>
+            </button>
+          </div>
+          
+          {/* Right: Login Button */}
+          <div className="flex-shrink-0 order-3">
+            <ErrorBoundary fallback={<div className="text-red-500 text-xs">Login unavailable</div>}>
+              <Suspense fallback={<div className="bg-gray-600 animate-pulse rounded-lg px-2 py-1 text-xs">Loading...</div>}>
+                <LoginButton 
+                  onLogin={(user) => {
+                    console.log('User logged in:', user);
+                  }}
+                  onLogout={() => {
+                    console.log('User logged out');
+                  }}
+                />
+              </Suspense>
+            </ErrorBoundary>
+          </div>
+          
         </div>
       </nav>
 
@@ -142,7 +235,7 @@ const App: React.FC = () => {
           }>
             <Sidebar
               data={memoizedData}
-              categoryOrder={categoryOrder}
+              categoryOrder={getCurrentCategoryOrder()}
               selectedCategory={selectedCategory}
               selectedTopic={selectedTopic}
               setSelectedCategory={setSelectedCategory}

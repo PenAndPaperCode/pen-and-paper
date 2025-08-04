@@ -1,5 +1,5 @@
 const revisionSheetData = {
-  "problems": {
+  "Must Do DSA Problems": {
     "Maximum Width of Binary Tree": {
       youtube: "",
       platform: "https://leetcode.com/problems/maximum-width-of-binary-tree/",
@@ -21,7 +21,7 @@ const revisionSheetData = {
       github: ""
     },
     "Minimum Window Substring": {
-      youtube: "",
+      youtube: "https://youtu.be/6eiFiYqXlGM",
       platform: "https://leetcode.com/problems/minimum-window-substring/",
       github: ""
     },
@@ -170,13 +170,18 @@ const revisionSheetData = {
       platform: "https://leetcode.com/problems/making-a-large-island/",
       github: ""
     },
+    "Trapping Rain Water II": {
+      youtube: "",
+      platform: "https://leetcode.com/problems/trapping-rain-water-ii/description/",
+      github: ""
+    },
     "Validate Binary Search Tree": {
       youtube: "",
       platform: "https://leetcode.com/problems/validate-binary-search-tree/",
       github: ""
     },
     "Trapping Rain Water": {
-      youtube: "",
+      youtube: "https://youtu.be/pVHtGIlea3I",
       platform: "https://leetcode.com/problems/trapping-rain-water/",
       github: ""
     },
@@ -401,7 +406,7 @@ const revisionSheetData = {
       github: ""
     },
     "Count Subsets with Sum K": {
-      youtube: "",
+      youtube: "https://youtu.be/WQCDbbf0qug",
       platform: "https://www.geeksforgeeks.org/problems/perfect-sum-problem5633/1",
       github: ""
     },
@@ -426,12 +431,12 @@ const revisionSheetData = {
       github: ""
     },
     "Number of Islands": {
-      youtube: "",
+      youtube: "https://youtu.be/amVful-BCsQ",
       platform: "https://leetcode.com/problems/number-of-islands/",
       github: ""
     },
-     "Count Number of Nice Sub arrays": {
-       youtube: "",
+     "Count Number of Nice Subarrays": {
+       youtube: "https://youtu.be/44MB7fND_0c",
        platform: "https://leetcode.com/problems/count-number-of-nice-subarrays/description/",
        github: ""
      },
@@ -453,6 +458,11 @@ const revisionSheetData = {
      "Kth Smallest Product of Two Sorted Arrays": {
        youtube: "",
        platform: "https://leetcode.com/problems/kth-smallest-product-of-two-sorted-arrays/description/",
+       github: ""
+     },
+     "Minimum Cost to Merge Stones": {
+       youtube: "",
+       platform: "https://leetcode.com/problems/minimum-cost-to-merge-stones/description/",
        github: ""
      }
   }

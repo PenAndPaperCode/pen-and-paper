@@ -1,15 +1,14 @@
 import React from 'react';
-import { AppData } from '../types';
 
 interface WelcomeProps {
-  category: keyof AppData | null;
+  category: string | null;
   topic: string | null;
-  setSelectedCategory: React.Dispatch<React.SetStateAction<keyof AppData | null>>;
+  setSelectedCategory: React.Dispatch<React.SetStateAction<string | null>>;
 }
 
 const Welcome: React.FC<WelcomeProps> = ({ category, topic, setSelectedCategory }) => {
   // Handler for category card clicks
-  const handleCategoryClick = (selectedCategory: keyof AppData) => {
+  const handleCategoryClick = (selectedCategory: string) => {
     setSelectedCategory(selectedCategory);
   };
 

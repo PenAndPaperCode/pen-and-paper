@@ -33,9 +33,9 @@ import twoPointerData from './dsa/twoPointerData';
  * Complete collection of DSA topics organized by category in lexicographical order
  */
 const dsaData: DSAData = {
-  "Recursion": recursionData,
   "Binary Search": binarySearchData,
   "Two Pointer": twoPointerData,
+  "Recursion": recursionData,
   "Graph": graphData,
   "Stack": stackData,
   "Array": arrayData,

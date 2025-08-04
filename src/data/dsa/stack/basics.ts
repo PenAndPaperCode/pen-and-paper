@@ -1,10 +1,15 @@
 const basics = {
-  "Introduction to Stacks": {
+  "Introduction to Stacks Series": {
+    youtube: "https://youtu.be/dtj1k0SC6yM",
+    platform: "",
+    github: "",
+  },
+  "All You Need To Know About Stack": {
     youtube: "",
     platform: "",
     github: "",
   },
-  "Stack Operations": {
+  "All Stack Problem Patterns": {
     youtube: "",
     platform: "",
     github: "",

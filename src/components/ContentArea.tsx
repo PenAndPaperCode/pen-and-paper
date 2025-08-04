@@ -1,18 +1,18 @@
 import React, { Suspense, lazy, memo, useEffect } from 'react';
-import { AppData, DoneStatusType } from '../types';
+import { DoneStatusType } from '../types';
 import ErrorBoundary from './ErrorBoundary';
 
 const DataTable = lazy(() => import('./DataTable'));
 const Welcome = lazy(() => import('./Welcome'));
 
 interface ContentAreaProps {
-  selectedCategory: keyof AppData | null;
+  selectedCategory: string | null;
   selectedTopic: string | null;
   selectedSubtopic: string | null;
-  data: AppData;
+  data: any;
   doneStatus: DoneStatusType;
   setDoneStatus: React.Dispatch<React.SetStateAction<DoneStatusType>>;
-  setSelectedCategory: React.Dispatch<React.SetStateAction<keyof AppData | null>>;
+  setSelectedCategory: React.Dispatch<React.SetStateAction<string | null>>;
 }
 
 const ContentArea: React.FC<ContentAreaProps> = memo(({
@@ -27,15 +27,23 @@ const ContentArea: React.FC<ContentAreaProps> = memo(({
   // Debug logging
   useEffect(() => {
     // eslint-disable-next-line no-console
-    console.log('ContentArea rendering with:', { selectedCategory, selectedTopic, selectedSubtopic });
+    console.log('ContentArea rendering with:', { 
+      selectedCategory, 
+      selectedTopic, 
+      selectedSubtopic,
+      shouldShowTable: shouldShowDataTable(),
+      dataKeys: data ? Object.keys(data) : 'no data'
+    });
   }, [selectedCategory, selectedTopic, selectedSubtopic]);
 
   // Determine if we should show the data table
   const shouldShowDataTable = () => {
     if (!selectedCategory) return false;
     
-    // Special case for Revision Sheet - always show data table
-    if (selectedCategory === 'DSA Countdown: Final 15 Days' || selectedCategory === 'ALL DSA Patterns You must know') return true;
+    // Special case for Revision Sheet - show data table when category is selected (topic will be auto-set)
+    if (selectedCategory === 'DSA Countdown: Final 15 Days' || selectedCategory === 'ALL DSA Patterns You must know') {
+      return true;
+    }
     
     if (!selectedTopic) return false;
     
@@ -68,7 +76,12 @@ const ContentArea: React.FC<ContentAreaProps> = memo(({
             <ErrorBoundary fallback={<div className="text-red-500">Error loading data table. Please check the console for details.</div>}>
               <DataTable
                 selectedCategory={selectedCategory}
-                selectedTopic={selectedTopic || "problems"}
+                selectedTopic={
+                  selectedTopic || 
+                  (selectedCategory === "DSA Countdown: Final 15 Days" ? "Must Do DSA Problems" : 
+                   selectedCategory === "ALL DSA Patterns You must know" ? "Must Know DSA Patterns" : 
+                   "problems")
+                }
                 selectedSubtopic={selectedSubtopic || ''}
                 data={data}
                 doneStatus={doneStatus}

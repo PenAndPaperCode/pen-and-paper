@@ -7,8 +7,8 @@
  */
 
 const dsaPatternsData = {
-  "problems": {
-      "All DSA Pattern Introduction": {
+  "Must Know DSA Patterns": {
+      "Introduction": {
         youtube: "",
         platform: "",
         github: ""
@@ -49,6 +49,11 @@ const dsaPatternsData = {
         github: ""
       },
       "BFS in (Graph and Matrix)": {
+        youtube: "",
+        platform: "",
+        github: ""
+      },
+      "Topological Sort": {
         youtube: "",
         platform: "",
         github: ""

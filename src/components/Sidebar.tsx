@@ -1,12 +1,11 @@
 import React, { memo, useCallback, useState, useEffect, useRef } from 'react';
-import { AppData } from '../types';
 
 interface SidebarProps {
-  data: AppData;
+  data: any;
   categoryOrder: string[];
-  selectedCategory: keyof AppData | null;
+  selectedCategory: string | null;
   selectedTopic: string | null;
-  setSelectedCategory: React.Dispatch<React.SetStateAction<keyof AppData | null>>;
+  setSelectedCategory: React.Dispatch<React.SetStateAction<string | null>>;
   setSelectedTopic: React.Dispatch<React.SetStateAction<string | null>>;
   setSelectedSubtopic: React.Dispatch<React.SetStateAction<string | null>>;
 }
@@ -67,11 +66,18 @@ const Sidebar: React.FC<SidebarProps> = memo(({
     }
   }, [selectedTopic]);
 
-  const handleCategoryClick = useCallback((category: keyof AppData) => {
-    // Special handling for Revision Sheet
-    if (category === "DSA Countdown: Final 15 Days" || category === "ALL DSA Patterns You must know") {
+  const handleCategoryClick = useCallback((category: string) => {
+    // Special handling for Revision Sheet and DSA Patterns (they have direct problems)
+    if (category === "DSA Countdown: Final 15 Days") {
       setSelectedCategory(category);
-      setSelectedTopic("problems");
+      setSelectedTopic("Must Do DSA Problems");
+      setSelectedSubtopic(null);
+      return;
+    }
+    
+    if (category === "ALL DSA Patterns You must know") {
+      setSelectedCategory(category);
+      setSelectedTopic("Must Know DSA Patterns");
       setSelectedSubtopic(null);
       return;
     }
@@ -116,7 +122,7 @@ const Sidebar: React.FC<SidebarProps> = memo(({
   }, [setSelectedSubtopic]);
 
   // Function to safely get subtopics for a category and topic
-  const getSubtopics = (category: keyof AppData, topic: string): string[] => {
+  const getSubtopics = (category: string | null, topic: string): string[] => {
     if (!category || !topic) return [];
     
     const categoryData = data[category];
@@ -161,6 +167,18 @@ const Sidebar: React.FC<SidebarProps> = memo(({
         hover: "hover:bg-gray-700",
         selected: "bg-gray-700",
         text: "text-red-400"
+      },
+      "DSA Countdown: Final 15 Days": {
+        bg: "bg-gray-800",
+        hover: "hover:bg-gray-700",
+        selected: "bg-gray-700",
+        text: "text-yellow-400"
+      },
+      "ALL DSA Patterns You must know": {
+        bg: "bg-gray-800",
+        hover: "hover:bg-gray-700",
+        selected: "bg-gray-700",
+        text: "text-emerald-400"
       }
     };
     return colorMap[category] || {
@@ -202,6 +220,18 @@ const Sidebar: React.FC<SidebarProps> = memo(({
         hover: "hover:bg-gray-700",
         selected: "bg-gray-700",
         text: "text-red-300"
+      },
+      "DSA Countdown: Final 15 Days": {
+        bg: "bg-gray-800",
+        hover: "hover:bg-gray-700",
+        selected: "bg-gray-700",
+        text: "text-yellow-300"
+      },
+      "ALL DSA Patterns You must know": {
+        bg: "bg-gray-800",
+        hover: "hover:bg-gray-700",
+        selected: "bg-gray-700",
+        text: "text-emerald-300"
       }
     };
     return colorMap[category] || {
@@ -243,6 +273,18 @@ const Sidebar: React.FC<SidebarProps> = memo(({
         hover: "hover:bg-gray-700",
         selected: "bg-gray-700",
         text: "text-red-200"
+      },
+      "DSA Countdown: Final 15 Days": {
+        bg: "bg-gray-800",
+        hover: "hover:bg-gray-700",
+        selected: "bg-gray-700",
+        text: "text-yellow-200"
+      },
+      "ALL DSA Patterns You must know": {
+        bg: "bg-gray-800",
+        hover: "hover:bg-gray-700",
+        selected: "bg-gray-700",
+        text: "text-emerald-200"
       }
     };
     return colorMap[category] || {
@@ -253,17 +295,12 @@ const Sidebar: React.FC<SidebarProps> = memo(({
     };
   };
 
-  // Filter out the revision sheet from regular categories
-  const regularCategories = categoryOrder.filter(cat => 
-    cat !== "DSA Countdown: Final 15 Days" && cat !== "ALL DSA Patterns You must know"
-  );
-
   return (
     <div ref={sidebarRef} className="w-1/4 bg-gray-900 p-4 flex flex-col sidebar-container sidebar-locked" style={{ height: 'calc(100vh - 140px)', overscrollBehavior: 'none', position: 'relative' }} role="navigation">
       {/* Main categories section - scrollable */}
       <div ref={scrollableRef} className="flex-1 overflow-y-auto pr-2" style={{ minHeight: 0 }}>
         <ul className="space-y-2">
-          {regularCategories.map((category) => {
+          {categoryOrder.map((category) => {
             const categoryColors = getCategoryColors(category);
             return (
               <li key={category} className="mb-4">
@@ -273,18 +310,25 @@ const Sidebar: React.FC<SidebarProps> = memo(({
                       ? `${categoryColors.selected} shadow-lg border border-gray-600` 
                       : `${categoryColors.bg} ${categoryColors.hover} shadow-md`
                   } ${categoryColors.text}`}
-                  onClick={() => handleCategoryClick(category as keyof AppData)}
+                  onClick={() => handleCategoryClick(category)}
                   aria-expanded={selectedCategory === category}
                   aria-controls={`${category}-topics`}
                 >
-                  <span className="font-bold text-lg">{category}</span>
+                  <span className="font-bold text-lg">
+                    {category === "DSA Countdown: Final 15 Days" && "🚀 "}
+                    {category === "ALL DSA Patterns You must know" && "📚 "}
+                    {category}
+                  </span>
                   <span className="float-right text-lg">{selectedCategory === category ? '▼' : '▶'}</span>
                 </button>
                 
                 {selectedCategory === category && (
                   <ul id={`${category}-topics`} className="ml-4 mt-3 space-y-2">
-                    {Object.keys((data[category as keyof AppData] as any)).map((topic) => {
+                    {Object.keys((data[category] as any)).map((topic) => {
                       const topicColors = getTopicColors(category);
+                      // For revision sheet categories, don't show expandable topics since they contain individual problems
+                      const isRevisionCategory = category === "DSA Countdown: Final 15 Days" || category === "ALL DSA Patterns You must know";
+                      
                       return (
                         <li key={topic}>
                           <button
@@ -298,10 +342,12 @@ const Sidebar: React.FC<SidebarProps> = memo(({
                             aria-controls={`${topic}-subtopics`}
                           >
                             <span className="font-medium">{topic}</span>
-                            <span className="float-right">{selectedTopic === topic && expandedTopics[topic] ? '▼' : '▶'}</span>
+                            {!isRevisionCategory && (
+                              <span className="float-right">{selectedTopic === topic && expandedTopics[topic] ? '▼' : '▶'}</span>
+                            )}
                           </button>
                           
-                          {selectedTopic === topic && expandedTopics[topic] && (
+                          {!isRevisionCategory && selectedTopic === topic && expandedTopics[topic] && (
                             <ul id={`${topic}-subtopics`} className="ml-4 mt-2 space-y-1">
                               {getSubtopics(selectedCategory, topic).map((subtopic) => {
                                 const subtopicColors = getSubtopicColors(category);
@@ -331,33 +377,6 @@ const Sidebar: React.FC<SidebarProps> = memo(({
             );
           })}
         </ul>
-      </div>
-      
-      {/* Footer section with revision sheet - fixed at bottom */}
-      <div className="flex-shrink-0 pt-4 border-t border-gray-700">
-        <button
-          className={`w-full text-left p-3 rounded-lg mb-2 transition-all duration-200 ${
-            selectedCategory === "DSA Countdown: Final 15 Days" 
-              ? 'bg-gray-700 shadow-lg border border-gray-600' 
-              : 'bg-gray-800 hover:bg-gray-700 shadow-md'
-          } text-yellow-400 font-semibold`}
-          onClick={() => handleCategoryClick("DSA Countdown: Final 15 Days" as keyof AppData)}
-        >
-          <span className="font-bold">🚀 DSA Countdown: Final 15 Days</span>
-          <span className="float-right">▶</span>
-        </button>
-        
-        <button
-          className={`w-full text-left p-3 rounded-lg transition-all duration-200 ${
-            selectedCategory === "ALL DSA Patterns You must know" 
-              ? 'bg-gray-700 shadow-lg border border-gray-600' 
-              : 'bg-gray-800 hover:bg-gray-700 shadow-md'
-          } text-emerald-400 font-semibold`}
-          onClick={() => handleCategoryClick("ALL DSA Patterns You must know" as keyof AppData)}
-        >
-          <span className="font-bold">📚 ALL DSA Patterns You must know</span>
-          <span className="float-right">▶</span>
-        </button>
       </div>
     </div>
   );
