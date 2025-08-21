@@ -464,6 +464,11 @@ const revisionSheetData = {
        youtube: "",
        platform: "https://leetcode.com/problems/minimum-cost-to-merge-stones/description/",
        github: ""
+     },
+     "Count Subarrays With Score Less Than K": {
+       youtube: "",
+       platform: "https://leetcode.com/problems/count-subarrays-with-score-less-than-k/description/",
+       github: ""
      }
   }
 };

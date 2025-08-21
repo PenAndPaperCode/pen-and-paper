@@ -5,18 +5,23 @@ const basics = {
     github: "",
   },
   "All You Need To Know About Stack": {
-    youtube: "",
+    youtube: "https://youtu.be/ccFrO0wL-Sk",
     platform: "",
     github: "",
   },
   "All Stack Problem Patterns": {
-    youtube: "",
+    youtube: "https://youtu.be/otx43tSnxJA",
     platform: "",
     github: "",
   },
   "Valid Parentheses": {
-    youtube: "",
+    youtube: "https://youtu.be/kXE0sFmAE3E",
     platform: "https://leetcode.com/problems/valid-parentheses/",
+    github: "",
+  },
+  "Infix To Prefix Notation": {
+    youtube: "",
+    platform: "https://www.geeksforgeeks.org/problems/infix-to-prefix-notation/1",
     github: "",
   },
   "Min Stack": {
