@@ -450,6 +450,11 @@ const revisionSheetData = {
        platform: "https://leetcode.com/problems/find-the-shortest-superstring/description/",
        github: ""
      },
+     "Count of Smaller Numbers After Self": {
+       youtube: "",
+       platform: "https://leetcode.com/problems/count-of-smaller-numbers-after-self/description/",
+       github: ""
+     },
      "Cracking the Safe": {
        youtube: "",
        platform: "https://leetcode.com/problems/cracking-the-safe/description/",

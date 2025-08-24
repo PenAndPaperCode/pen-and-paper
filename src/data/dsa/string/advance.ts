@@ -19,6 +19,11 @@ const advance = {
     platform: "https://leetcode.com/problems/word-search-ii/",
     github: "",
   },
+  "Substring with Concatenation of All Words": {
+    youtube: "",
+    platform: "https://leetcode.com/problems/substring-with-concatenation-of-all-words/description/",
+    github: "",
+  },
   "KMP Algorithm": {
     youtube: "",
     platform: "",

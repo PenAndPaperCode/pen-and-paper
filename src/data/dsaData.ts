@@ -14,6 +14,7 @@ import binarySearchData from './dsa/binarySearchData';
 import binarySearchTreeData from './dsa/binarySearchTreeData';
 import binaryTreeData from './dsa/binaryTreeData';
 import bitManipulationData from './dsa/bitManipulationData';
+import divideAndConquerData from './dsa/divideAndConquerData';
 import dynamicProgrammingData from './dsa/dynamicProgrammingData';
 import graphData from './dsa/graphData';
 import greedyData from './dsa/greedyData';
@@ -38,6 +39,7 @@ const dsaData: DSAData = {
   "Recursion": recursionData,
   "Graph": graphData,
   "Stack": stackData,
+  "Divide and Conquer": divideAndConquerData,
   "Array": arrayData,
   "Binary Search Tree": binarySearchTreeData,
   "Binary Tree": binaryTreeData,
