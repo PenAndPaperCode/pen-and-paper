@@ -35,8 +35,13 @@ const basics = {
     github: "",
   },
   "Min Stack": {
-    youtube: "",
+    youtube: "https://youtu.be/QBBWS8fODoU",
     platform: "https://leetcode.com/problems/min-stack/",
+    github: "",
+  },
+  "Valid Parenthesis String": {
+    youtube: "https://youtu.be/zEOFg-nbnJQ",
+    platform: "https://leetcode.com/problems/valid-parenthesis-string/description/",
     github: "",
   },
   "Implement Queue using Stacks": {

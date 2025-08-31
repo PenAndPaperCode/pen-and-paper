@@ -1,9 +1,19 @@
 const advance = {
   "Largest Rectangle in Histogram": {
-    youtube: "",
+    youtube: "https://youtu.be/C0g1NWeO3tA",
     platform: "https://leetcode.com/problems/largest-rectangle-in-histogram/",
     github: "",
   },
+  "Largest Rectangle in Histogram | Most Optimal": {
+    youtube: "https://youtu.be/tL5f20Hc_ts",
+    platform: "https://leetcode.com/problems/largest-rectangle-in-histogram/",
+    github: "",
+  },
+ "Remove K Digits": {
+   youtube: "https://youtu.be/bAfJDp6_fV8",
+   platform: "https://leetcode.com/problems/remove-k-digits/",
+   github: "",
+ },
   "Basic Calculator": {
     youtube: "",
     platform: "https://leetcode.com/problems/basic-calculator/",
@@ -19,9 +29,9 @@ const advance = {
     platform: "https://leetcode.com/problems/next-greater-element-ii/",
     github: "",
   },
-  "Remove K Digits": {
+  "Count of Smaller Numbers After Self": {
     youtube: "",
-    platform: "https://leetcode.com/problems/remove-k-digits/",
+    platform: "https://leetcode.com/problems/count-of-smaller-numbers-after-self/description/",
     github: "",
   },
   "132 Pattern": {
