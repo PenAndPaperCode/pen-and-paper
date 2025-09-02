@@ -50,7 +50,7 @@ const basics = {
     github: "",
   },
   "Backspace String Compare": {
-    youtube: "",
+    youtube: "https://youtu.be/0mgq1tayL3w",
     platform: "https://leetcode.com/problems/backspace-string-compare/",
     github: "",
   },
