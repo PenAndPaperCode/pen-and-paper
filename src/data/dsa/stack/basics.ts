@@ -60,7 +60,7 @@ const basics = {
     github: "",
   },
   "Evaluate Reverse Polish Notation": {
-    youtube: "",
+    youtube: "https://youtu.be/yyjihy7UC9E",
     platform: "https://leetcode.com/problems/evaluate-reverse-polish-notation/",
     github: "",
   },
@@ -70,7 +70,7 @@ const basics = {
     github: "",
   },
   "Remove All Adjacent Duplicates In String": {
-    youtube: "",
+    youtube: "https://youtu.be/xavDt_Ie4AI",
     platform: "https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string/",
     github: "",
   }
