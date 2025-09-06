@@ -9,6 +9,11 @@ const advance = {
     platform: "https://leetcode.com/problems/largest-rectangle-in-histogram/",
     github: "",
   },
+  "Next Greater Element ||": {
+    youtube: "",
+    platform: "https://leetcode.com/problems/next-greater-element-ii/description/",
+    github: "",
+  },
  "Remove K Digits": {
    youtube: "https://youtu.be/bAfJDp6_fV8",
    platform: "https://leetcode.com/problems/remove-k-digits/",
@@ -42,11 +47,6 @@ const advance = {
   "Car Fleet": {
     youtube: "",
     platform: "https://leetcode.com/problems/car-fleet/",
-    github: "",
-  },
-  "Asteroid Collision": {
-    youtube: "",
-    platform: "https://leetcode.com/problems/asteroid-collision/",
     github: "",
   },
   "Basic Calculator II": {

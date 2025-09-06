@@ -64,11 +64,6 @@ const basics = {
     platform: "https://leetcode.com/problems/evaluate-reverse-polish-notation/",
     github: "",
   },
-  "Baseball Game": {
-    youtube: "",
-    platform: "https://leetcode.com/problems/baseball-game/",
-    github: "",
-  },
   "Remove All Adjacent Duplicates In String": {
     youtube: "https://youtu.be/xavDt_Ie4AI",
     platform: "https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string/",
