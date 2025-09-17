@@ -161,7 +161,7 @@ const revisionSheetData = {
       github: ""
     },
     "Basic Calculator": {
-      youtube: "",
+      youtube: "https://youtu.be/SqGXPt1AuBI",
       platform: "https://leetcode.com/problems/basic-calculator/description/",
       github: ""
     },
@@ -306,7 +306,7 @@ const revisionSheetData = {
       github: ""
     },
     "Largest Rectangle in Histogram": {
-      youtube: "",
+      youtube: "https://youtu.be/C0g1NWeO3tA",
       platform: "https://leetcode.com/problems/largest-rectangle-in-histogram/",
       github: ""
     },

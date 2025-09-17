@@ -24,14 +24,14 @@ const basics = {
     platform: "https://www.geeksforgeeks.org/problems/infix-to-postfix-1587115620/1",
     github: "",
   },
+  "Infix To Prefix Notation": {
+    youtube: "https://youtu.be/4USlqzp4VlE",
+    platform: "https://www.geeksforgeeks.org/problems/infix-to-prefix-notation/1",
+    github: "",
+  },
   "Next Greater Element": {
     youtube: "https://youtu.be/YCPXC6WKIVo",
     platform: "https://www.geeksforgeeks.org/problems/next-larger-element-1587115620/1",
-    github: "",
-  },
-  "Asteroid Collision": {
-    youtube: "https://youtu.be/vmkwu1G9IBM",
-    platform: "https://leetcode.com/problems/asteroid-collision/description/",
     github: "",
   },
   "Min Stack": {
@@ -44,19 +44,9 @@ const basics = {
     platform: "https://leetcode.com/problems/valid-parenthesis-string/description/",
     github: "",
   },
-  "Implement Queue using Stacks": {
-    youtube: "",
-    platform: "https://leetcode.com/problems/implement-queue-using-stacks/",
-    github: "",
-  },
   "Backspace String Compare": {
     youtube: "https://youtu.be/0mgq1tayL3w",
     platform: "https://leetcode.com/problems/backspace-string-compare/",
-    github: "",
-  },
-  "Next Greater Element ||": {
-    youtube: "",
-    platform: "https://leetcode.com/problems/next-greater-element-ii/description/",
     github: "",
   },
   "Evaluate Reverse Polish Notation": {
@@ -67,6 +57,11 @@ const basics = {
   "Remove All Adjacent Duplicates In String": {
     youtube: "https://youtu.be/xavDt_Ie4AI",
     platform: "https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string/",
+    github: "",
+  },
+  "Asteroid Collision": {
+    youtube: "https://youtu.be/vmkwu1G9IBM",
+    platform: "https://leetcode.com/problems/asteroid-collision/description/",
     github: "",
   }
 };

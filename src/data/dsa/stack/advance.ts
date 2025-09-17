@@ -10,7 +10,7 @@ const advance = {
     github: "",
   },
   "Next Greater Element ||": {
-    youtube: "",
+    youtube: "https://youtu.be/Awir3OM7FSs",
     platform: "https://leetcode.com/problems/next-greater-element-ii/description/",
     github: "",
   },
@@ -19,54 +19,54 @@ const advance = {
    platform: "https://leetcode.com/problems/remove-k-digits/",
    github: "",
  },
+ "Generate Parentheses": {
+   youtube: "https://youtu.be/gEn2nNpDzrk",
+   platform: "https://leetcode.com/problems/generate-parentheses/",
+   github: "",
+ },
+ "Basic Calculator II": {
+   youtube: "https://youtu.be/af0TirqOOM4",
+   platform: "https://leetcode.com/problems/basic-calculator-ii/",
+   github: "",
+ },
   "Basic Calculator": {
-    youtube: "",
+    youtube: "https://youtu.be/SqGXPt1AuBI",
     platform: "https://leetcode.com/problems/basic-calculator/",
     github: "",
   },
   "Daily Temperatures": {
-    youtube: "",
+    youtube: "https://youtu.be/EKLwxHCONz0",
     platform: "https://leetcode.com/problems/daily-temperatures/",
     github: "",
   },
-  "Next Greater Element II": {
-    youtube: "",
-    platform: "https://leetcode.com/problems/next-greater-element-ii/",
-    github: "",
-  },
-  "Count of Smaller Numbers After Self": {
-    youtube: "",
-    platform: "https://leetcode.com/problems/count-of-smaller-numbers-after-self/description/",
-    github: "",
-  },
   "132 Pattern": {
-    youtube: "",
+    youtube: "https://youtu.be/HuUOQxXCTMI",
     platform: "https://leetcode.com/problems/132-pattern/",
     github: "",
   },
   "Car Fleet": {
-    youtube: "",
+    youtube: "https://youtu.be/ReaKuM06fHY",
     platform: "https://leetcode.com/problems/car-fleet/",
     github: "",
   },
-  "Basic Calculator II": {
-    youtube: "",
-    platform: "https://leetcode.com/problems/basic-calculator-ii/",
-    github: "",
-  },
   "Decode String": {
-    youtube: "",
+    youtube: "https://youtu.be/XDh3LTUKKaM",
     platform: "https://leetcode.com/problems/decode-string/",
     github: "",
   },
   "Maximal Rectangle": {
-    youtube: "",
+    youtube: "https://youtu.be/PnQoYxemL7E",
     platform: "https://leetcode.com/problems/maximal-rectangle/",
     github: "",
   },
-  "Generate Parentheses": {
-    youtube: "",
-    platform: "https://leetcode.com/problems/generate-parentheses/",
+  "Number of Atoms": {
+    youtube: "https://youtu.be/MxGc48kPS70",
+    platform: "https://leetcode.com/problems/number-of-atoms/description/",
+    github: "",
+  },
+  "Stack Conclusion": {
+    youtube: "https://youtu.be/Sed3-mAhl4w",
+    platform: "",
     github: "",
   }
 };
