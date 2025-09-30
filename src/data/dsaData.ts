@@ -21,7 +21,7 @@ import greedyData from './dsa/greedyData';
 import hashMapPrefixData from './dsa/hashMapPrefixData';
 import heapData from './dsa/heapData';
 import linkedListData from './dsa/linkedListData';
-import mergeIntervalsData from './dsa/mergeIntervalsData';
+import intervalProblemsData from './dsa/mergeIntervalsData';
 import prefixSumData from './dsa/prefixSumData';
 import queueData from './dsa/queueData';
 import recursionData from './dsa/recursionData';
@@ -39,6 +39,7 @@ const dsaData: DSAData = {
   "Recursion": recursionData,
   "Graph": graphData,
   "Stack": stackData,
+  "Interval problems": intervalProblemsData,
   "Divide and Conquer": divideAndConquerData,
   "Array": arrayData,
   "Binary Search Tree": binarySearchTreeData,
@@ -49,7 +50,6 @@ const dsaData: DSAData = {
   "HashMap + Prefix Patterns": hashMapPrefixData,
   "Heap": heapData,
   "Linked List": linkedListData,
-  "Merge Intervals": mergeIntervalsData,
   "Prefix Sum": prefixSumData,
   "Queue": queueData,
   "String": stringData,
