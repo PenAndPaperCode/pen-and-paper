@@ -31,7 +31,7 @@ import trieData from './dsa/trieData';
 import twoPointerData from './dsa/twoPointerData';
 
 /**
- * Complete collection of DSA topics organized by category in lexicographical order
+ * Complete collection of DSA topics organized by category
  */
 const dsaData: DSAData = {
   "Binary Search": binarySearchData,
@@ -41,10 +41,10 @@ const dsaData: DSAData = {
   "Stack": stackData,
   "Interval problems": intervalProblemsData,
   "Divide and Conquer": divideAndConquerData,
+  "Bit Manipulation": bitManipulationData,
   "Array": arrayData,
   "Binary Search Tree": binarySearchTreeData,
   "Binary Tree": binaryTreeData,
-  "Bit Manipulation": bitManipulationData,
   "Dynamic Programming": dynamicProgrammingData,
   "Greedy": greedyData,
   "HashMap + Prefix Patterns": hashMapPrefixData,

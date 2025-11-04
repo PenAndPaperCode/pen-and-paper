@@ -1,17 +1,8 @@
 const advance = {
-  "Find the Number of Copy Arrays": {
-    youtube: "",
-    platform: "https://leetcode.com/problems/find-the-number-of-copy-arrays/description/",
-    github: "",
-  },
+
   "Count the Number of Inversions": {
     youtube: "",
     platform: "https://leetcode.com/problems/count-the-number-of-inversions/description/",
-    github: "",
-  },
-  "Reverse Pairs": {
-    youtube: "",
-    platform: "https://leetcode.com/problems/reverse-pairs/description/",
     github: "",
   },
   "K Inverse Pairs Array": {

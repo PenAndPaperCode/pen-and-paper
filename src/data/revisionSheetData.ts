@@ -275,6 +275,11 @@ const revisionSheetData = {
       platform: "https://leetcode.com/problems/word-break/",
       github: ""
     },
+    "Number of Wonderful Substrings": {
+      youtube: "",
+      platform: "https://leetcode.com/problems/number-of-wonderful-substrings/description/",
+      github: ""
+    },
     "Distinct Subsequences": {
       youtube: "",
       platform: "https://leetcode.com/problems/distinct-subsequences/",
@@ -353,6 +358,11 @@ const revisionSheetData = {
     "House Robber II": {
       youtube: "",
       platform: "https://leetcode.com/problems/house-robber-ii/",
+      github: ""
+    },
+    "Find the Longest Substring Containing Vowels in Even Counts": {
+      youtube: "",
+      platform: "https://leetcode.com/problems/find-the-longest-substring-containing-vowels-in-even-counts/description/",
       github: ""
     },
     "Delete Node in a BST": {
@@ -438,6 +448,11 @@ const revisionSheetData = {
      "Count Number of Nice Subarrays": {
        youtube: "https://youtu.be/44MB7fND_0c",
        platform: "https://leetcode.com/problems/count-number-of-nice-subarrays/description/",
+       github: ""
+     },
+     "Find Longest Awesome Substring": {
+       youtube: "",
+       platform: "https://leetcode.com/problems/find-longest-awesome-substring/",
        github: ""
      },
      "Reconstruct Itinerary": {
