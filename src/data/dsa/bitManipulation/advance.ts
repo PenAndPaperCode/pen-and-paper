@@ -9,13 +9,18 @@ const advance = {
     platform: "https://leetcode.com/problems/decode-xored-array/description/",
     github: "",
   },
+  "Prime Number of Set Bits in Binary Representation": {
+    youtube: "https://youtu.be/ZoeQj5MNZIU",
+    platform: "https://leetcode.com/problems/prime-number-of-set-bits-in-binary-representation/description/",
+    github: "",
+  },
   "XOR Queries of a Subarray": {
-    youtube: "",
+    youtube: "https://youtu.be/O4y_cMOOFx8",
     platform: "https://leetcode.com/problems/xor-queries-of-a-subarray/description/",
     github: "",
   },
   "Single Number II": {
-    youtube: "",
+    youtube: "https://youtu.be/sDov3NbU7jE",
     platform: "https://leetcode.com/problems/single-number-ii/",
     github: "",
   },
@@ -25,7 +30,7 @@ const advance = {
     github: "",
   },
   "Single Number III": {
-    youtube: "",
+    youtube: "https://youtu.be/5xLBBqfAMAQ",
     platform: "https://leetcode.com/problems/single-number-iii/description/",
     github: "",
   },
