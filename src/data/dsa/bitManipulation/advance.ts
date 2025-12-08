@@ -25,7 +25,7 @@ const advance = {
     github: "",
   },
   "Divide Two Integers": {
-    youtube: "",
+    youtube: "https://youtu.be/LdPVC3D4Qjw",
     platform: "https://leetcode.com/problems/divide-two-integers/description/",
     github: "",
   },
@@ -35,32 +35,32 @@ const advance = {
     github: "",
   },
   "Sum of Two Integers": {
-    youtube: "",
+    youtube: "https://youtu.be/0J6O0cjQ_d4",
     platform: "https://leetcode.com/problems/sum-of-two-integers/description/",
     github: "",
   },
   "Minimum Flips to Make a OR b Equal to c": {
-    youtube: "",
+    youtube: "https://youtu.be/UCe-PS-rkLk",
     platform: "https://leetcode.com/problems/minimum-flips-to-make-a-or-b-equal-to-c/description/",
     github: "",
   },
+  "Find the Longest Substring Containing Vowels in Even Counts": {
+      youtube: "https://youtu.be/CMa9CK5He7s",
+      platform: "https://leetcode.com/problems/find-the-longest-substring-containing-vowels-in-even-counts/description/",
+      github: "",
+  },
   "Find Longest Awesome Substring": {
-    youtube: "",
+    youtube: "https://youtu.be/FKyZJ08ohUw",
     platform: "https://leetcode.com/problems/find-longest-awesome-substring/",
     github: "",
   },
-  "Find the Longest Substring Containing Vowels in Even Counts": {
-    youtube: "",
-    platform: "https://leetcode.com/problems/find-the-longest-substring-containing-vowels-in-even-counts/description/",
-    github: "",
-  },
   "Number of Wonderful Substrings": {
-    youtube: "",
+    youtube: "https://youtu.be/vE21etwT03w",
     platform: "https://leetcode.com/problems/number-of-wonderful-substrings/description/",
     github: "",
   },
   "Subsets": {
-    youtube: "",
+    youtube: "https://youtu.be/maW57JjpN8Y",
     platform: "https://leetcode.com/problems/subsets/description/",
     github: "",
   },
@@ -73,17 +73,7 @@ const advance = {
     youtube: "",
     platform: "https://leetcode.com/problems/maximum-product-of-word-lengths/description/",
     github: "",
-  },
-  "Maximum XOR of Two Numbers in an Array": {
-    youtube: "",
-    platform: "https://leetcode.com/problems/subsets/description/",
-    github: "",
-  },
-  "Maximum XOR With an Element From Array": {
-    youtube: "",
-    platform: "https://leetcode.com/problems/maximum-xor-with-an-element-from-array/description/",
-    github: "",
-  },
+  }
 
 };
 
